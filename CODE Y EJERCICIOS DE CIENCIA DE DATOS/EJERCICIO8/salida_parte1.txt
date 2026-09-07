@@ -1,0 +1,118 @@
+
+==============================================================================
+1. INTEGRIDAD Y MONTAJE DEL EXPERIMENTO
+==============================================================================
+Filas: 500 | usuarios unicos: 500 | nulos: 0 | filas duplicadas: 0
+Ventana: 2026-03-01 a 2026-03-28 (28 dias)
+Coherencia convirtio<->ingreso: convirtio=1 con ingreso=0 -> 0; convirtio=0 con ingreso>0 -> 0
+
+-- 1.a Sample Ratio Mismatch (SRM) del reparto de grupos --
+control=250  tratamiento=250  (esperado 50/50)
+Chi2 bondad de ajuste: X2=0.0000, gl=1, p=1.0000
+-> SIN SRM: el reparto global es exactamente 50/50.
+
+-- 1.b Distribucion por dispositivo (covariable pre-tratamiento) --
+dispositivo  escritorio  movil  tableta
+grupo                                  
+control             117     95       38
+tratamiento          80    142       28
+
+Porcentaje dentro de cada grupo:
+dispositivo  escritorio  movil  tableta
+grupo                                  
+control            46.8   38.0     15.2
+tratamiento        32.0   56.8     11.2
+
+Chi2 de independencia grupo x dispositivo: X2=17.7851, gl=2, p=0.000137
+Frecuencia esperada minima: 33.0 (>5 -> supuesto del chi2 OK)
+V de Cramer = 0.1886
+-> DESBALANCE SIGNIFICATIVO: la aleatorizacion NO produjo grupos comparables en dispositivo. Es un confusor potencial.
+
+-- 1.c Balance de covariables numericas --
+
+  duracion_sesion: control mu=217.00 (DE 111.19) | tratamiento mu=229.34 (DE 113.61)
+    Levene p=0.7372 | Welch t=-1.228 p=0.2202 | Mann-Whitney p=0.2118 | d de Cohen=0.110
+    -> balanceada
+
+  paginas_vistas: control mu=7.06 (DE 4.17) | tratamiento mu=7.24 (DE 4.01)
+    Levene p=0.4192 | Welch t=-0.503 p=0.6151 | Mann-Whitney p=0.6008 | d de Cohen=0.045
+    -> balanceada
+
+-- 1.d Reparto por dia (sesgo temporal) --
+Proporcion diaria de tratamiento: min=0.20 max=0.79 media=0.51
+Chi2 de SRM diario: X2=21.309, gl=27, p=0.7716
+-> sin evidencia de sesgo temporal en la asignacion
+
+==============================================================================
+2. POTENCIA Y EFECTO MINIMO DETECTABLE (MDE) - CONVERSION
+==============================================================================
+Tasa base observada (control) = 0.5040
+Con n=250+250, alpha=0.05 bilateral y potencia objetivo=80%:
+  h de Cohen minimo detectable = 0.2506
+  MDE absoluto al alza   = +12.39 pp  (detecta tasas >= 0.6279)
+  MDE absoluto a la baja = -12.41 pp  (detecta tasas <= 0.3799)
+  MDE relativo al alza   = +24.6%
+
+Potencia post-hoc con el efecto observado (h=0.7958): 1.0000
+  Nota: la potencia post-hoc calculada con el efecto observado es una funcion
+  monotona del valor p y NO aporta informacion nueva. La cifra que si informa
+  el diseno es el MDE ex-ante de arriba, junto con el IC del efecto.
+
+Tamano de muestra necesario por grupo (alpha=.05, potencia=.80, base 0.504):
+  para detectar +1 pp -> 39,231 por grupo
+  para detectar +2 pp -> 9,803 por grupo
+  para detectar +5 pp -> 1,564 por grupo
+  para detectar +10 pp -> 387 por grupo
+
+==============================================================================
+3. PRUEBA PRINCIPAL - TASA DE CONVERSION
+==============================================================================
+Supuestos:
+  (a) independencia: 1 fila = 1 usuario unico, sin duplicados -> OK
+  (b) esperados >=5: minimo = 79.5 -> aproximacion normal valida
+  (c) asignacion aleatoria -> CUESTIONADA (ver 1.b)
+
+control:     126/250 = 0.5040  IC95% Wilson [0.4424, 0.5654]
+tratamiento: 215/250 = 0.8600  IC95% Wilson [0.8115, 0.8976]
+
+z de dos proporciones : z=8.5467  p=1.266e-17
+Chi2 (correc. Yates)  : X2=71.4141  p=2.896e-17
+Fisher exacto         : OR=6.0454  p=6.117e-18
+
+Diferencia absoluta   : +35.60 pp   IC95% [+28.06, +43.14] pp
+Lift relativo         : +70.6%
+Riesgo relativo (RR)  : 1.7063  IC95% [1.4942, 1.9486]
+Odds ratio (OR)       : 6.0454  IC95% [3.9135, 9.3384]
+h de Cohen            : 0.7958 (>0.8 = efecto grande)
+NNT (usuarios expuestos por conversion extra): 2.81
+
+==============================================================================
+4. INGRESO POR USUARIO (ARPU) - PRUEBA PARA DATOS NO NORMALES
+==============================================================================
+-- Verificacion de supuestos --
+  control      n=250 media=21.75 mediana=4.63 DE=29.09 asimetria=1.368 curtosis=1.189 ceros=49.6%
+               Shapiro-Wilk W=0.7727 p=2.523e-18 -> NO normal
+  tratamiento  n=250 media=53.54 mediana=46.18 DE=41.88 asimetria=0.835 curtosis=0.402 ceros=14.0%
+               Shapiro-Wilk W=0.9358 p=5.571e-09 -> NO normal
+  Levene (homocedasticidad): W=21.2464 p=5.139e-06 -> varianzas DESIGUALES
+  -> Se descarta el t de Student clasico. Distribucion con masa en cero y cola
+     derecha larga. Prueba principal: Mann-Whitney U (no parametrica).
+
+Mann-Whitney U=16017.5  p=9.258e-22
+  Tamano de efecto: P(ingreso_tratamiento > ingreso_control) = 0.7437
+  Delta de Cliff = +0.4874  (|d|>0.474 = efecto grande)
+Kolmogorov-Smirnov 2 muestras: D=0.4080 p=5.355e-19
+Brunner-Munzel (robusto a varianzas/formas desiguales): W=11.2347 p=0.000e+00
+Nota: Mann-Whitney contrasta dominancia estocastica, no medias. Como las formas
+      difieren, se complementa con estimadores de la media (abajo).
+
+Estimador Hodges-Lehmann (mediana de las diferencias) = +29.52
+Diferencia de MEDIAS (ARPU): +31.79  IC95% bootstrap [+25.42, +38.09] (B=20,000)
+  ARPU control=21.75 | ARPU tratamiento=53.54 | lift=+146.1%
+Welch t (solo de referencia, supuestos violados): t=9.857 p=7.399e-21
+
+-- Descomposicion: conversion vs ticket promedio --
+  Ticket entre CONVERSORES: control mediana=36.28 (n=126) | tratamiento mediana=54.34 (n=215)
+  Mann-Whitney sobre conversores: U=9437.5 p=0.0000 -> difiere
+  Diferencia de ticket medio: +19.10  IC95% [+12.12, +26.10]
+  -> El ARPU se mueve porque cambia la CONVERSION y tambien el ticket.

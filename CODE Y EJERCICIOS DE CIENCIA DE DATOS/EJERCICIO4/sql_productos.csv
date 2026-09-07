@@ -1,0 +1,13 @@
+id_producto,nombre_producto,categoria,precio,costo
+P001,Monitor,Electronica,300.61,187.92
+P002,Laptop,Electronica,666.74,346.79
+P003,Audifonos,Electronica,43.25,20.83
+P004,Palo de golf,Deportes,115.83,72.07
+P005,Bicicleta,Deportes,410.3,208.63
+P006,Balon de futbol,Deportes,46.13,29.31
+P007,Sueter,Ropa,62.74,44.07
+P008,Jeans,Ropa,64.69,43.71
+P009,Chamarra,Ropa,67.4,43.79
+P010,Licuadora,Hogar,138.79,94.18
+P011,Lampara,Hogar,59.74,36.99
+P012,Juego de sabanas,Hogar,64.04,40.57

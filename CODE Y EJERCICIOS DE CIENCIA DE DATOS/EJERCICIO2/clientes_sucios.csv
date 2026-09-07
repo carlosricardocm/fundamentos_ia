@@ -1,0 +1,101 @@
+id_cliente,nombre_cliente,email,telefono,fecha_registro,ingreso_anual,pais,edad,activo
+C0038,SOFIA delgado,sofia.delgado@ejemplo.com,555.176.5430,10/10/2021,"$174,238.65",UK,66,false
+C0026,JAVIER nava,javier.nava@ejemplo.com,555-272-4688,2021-05-12,"$224,378.35",Mexico,66,0
+C0010,ROBERTO caceres,roberto.caceres@ejemplo.com.mx,5558333833,"May 07, 2022","$23,595.50",United Kingdom,36,Y
+C0015,paola SIERRA,paola.sierra@ejemplo.com,5555666775,"February 19, 2023","$39,730.09",MX,64,si
+C0044,natalia RIOS,natalia.rios@ejemplo.com,+1 5557033016,13-Jun-2022,"$56,747.24",United States,26,TRUE
+C0010,ROBERTO caceres,roberto.caceres@ejemplo.com.mx,5558333833,"May 07, 2022","$23,595.50",United Kingdom,36,Y
+C0045,FERNANDO castro,fernando.castro@ejemplo.com,5552067458,"June 17, 2024","$32,869.12",MX,,si
+C0032,juan PEREZ,juan.perez@ejemplo.com,(555) 116-2252,06/08/2022,"$136,527.05",U.S.,31,1
+C0005,LUISA martinez,luisa.martinez@ejemplo.com,5553544182,"October 15, 2023","$47,026.90",MX,58,si
+C0040,laura MEJIA,laura.mejia@ejemplo.com.mx,5552218165,"July 05, 2023","$84,405.78",United Kingdom,30,Y
+C0034,  ana   GOMEZ ,correo_sin_arroba.com,+1 5551887306,06-Oct-2022,"$237,050.04",United States,71,TRUE
+C0047,hugo BENITEZ,hugo.benitez@ejemplo.com,(555) 115-3475,21/08/2021,"$201,541.24",MEX,38,no
+C0013,natalia RIOS,natalia.rios@ejemplo.com.mx,555.713.1667,02/21/2024,"$224,291.78",USA,145,true
+C0004,carlos RUIZ,carlos.ruiz@ejemplo.com.mx,+1 5550705210,12-Sep-2024,"$26,653.42",United States,41,TRUE
+C0042,elena VARGAS,elena.vargas@ejemplo.com,(555) 882-6142,31/12/2022,"$90,070.89",U.S.,-3,1
+C0024,oscar VILLA,oscar.villa@ejemplo.com,+1 5553828212,30-Apr-2022,"$177,409.84",United States,25,TRUE
+C0020,ALBERTO nunez,,5556807485,"June 11, 2024","$134,874.14",United Kingdom,27,Y
+C0030,ricardo PONCE,ricardo.ponce@ejemplo.com,5557637417,"April 26, 2022","$137,252.33",United Kingdom,68,Y
+C0051,ALBERTO nunez,alberto.nunez@ejemplo.com,555-070-4762,2022-12-07,"$112,626.21",US,48,yes
+C0039,miguel ANGEL torres,miguel.torres@ejemplo.com,+1 5553216047,03-Dec-2023,"$62,354.47",U.K.,59,False
+C0004,carlos RUIZ,carlos.ruiz@ejemplo.com.mx,+1 5550705210,12-Sep-2024,"$26,653.42",United States,41,TRUE
+C0005,LUISA martinez,luisa.martinez@ejemplo.com,5553544182,"October 15, 2023","$47,026.90",MX,58,si
+C0036,LUISA martinez,luisa.martinez@ejemplo.com,555-040-6775,2023-08-02,"$185,514.61",Mexico,68,0
+C0045,FERNANDO castro,fernando.castro@ejemplo.com,5552067458,"June 17, 2024","$32,869.12",MX,,si
+C0021,teresa OCHOA,teresa.ochoa@ejemplo.com,555-151-2725,2022-04-20,"$224,370.97",US,32,yes
+C0015,paola SIERRA,paola.sierra@ejemplo.com,5555666775,"February 19, 2023","$39,730.09",MX,64,si
+C0020,ALBERTO nunez,,5556807485,"June 11, 2024","$134,874.14",United Kingdom,27,Y
+C0001,juan PEREZ,juan.perez@ejemplo.com.mx,555-324-8821,2023-11-27,"$24,897.45",US,34,yes
+C0024,oscar VILLA,oscar.villa@ejemplo.com,+1 5553828212,30-Apr-2022,"$177,409.84",United States,25,TRUE
+C0048,CLAUDIA moran,claudia.moran@ejemplo.com,555.216.3061,07/26/2024,"$144,039.52",UK,63,false
+C0040,laura MEJIA,laura.mejia@ejemplo.com.mx,5552218165,"July 05, 2023","$84,405.78",United Kingdom,30,Y
+C0028,ivan GUERRERO,ivan.guerrero@ejemplo.com.mx,555.214.8724,11/24/2023,"$26,602.80",UK,51,false
+C0043,JOSE antonio Lima,jose.lima@ejemplo.com.mx,555.374.5325,08/08/2023,"$238,892.09",USA,66,true
+C0014,FERNANDO castro,fernando.castro@ejemplo.com,+1 5554088460,20-May-2021,"$25,587.83",United States,33,TRUE
+C0009,laura MEJIA,laura.mejia@ejemplo.com,+1 5550623270,13-Jun-2022,"$60,833.07",U.K.,33,False
+C0010,ROBERTO caceres,roberto.caceres@ejemplo.com.mx,5558333833,"May 07, 2022","$23,595.50",United Kingdom,36,Y
+C0018,raul ESPINOZA,raul.espinoza@ejemplo.com,555.626.4034,01/22/2022,"$51,699.98",UK,38,false
+C0015,paola SIERRA,paola.sierra@ejemplo.com,5555666775,"February 19, 2023","$39,730.09",MX,64,si
+C0036,LUISA martinez,luisa.martinez@ejemplo.com,555-040-6775,2023-08-02,"$185,514.61",Mexico,68,0
+C0002,MARIA lopez,maria.lopez@ejemplo.com,(555) 335-1664,29/09/2021,"$76,491.55",U.S.,45,1
+C0001,juan PEREZ,juan.perez@ejemplo.com.mx,555-324-8821,2023-11-27,"$24,897.45",US,34,yes
+C0001,juan PEREZ,juan.perez@ejemplo.com.mx,555-324-8821,2023-11-27,"$24,897.45",US,34,yes
+C0040,laura MEJIA,laura.mejia@ejemplo.com.mx,5552218165,"July 05, 2023","$84,405.78",United Kingdom,30,Y
+C0020,ALBERTO nunez,,5556807485,"June 11, 2024","$134,874.14",United Kingdom,27,Y
+C0031,marta ZUNIGA,marta.zuniga@ejemplo.com.mx,555-342-7043,2023-03-27,"$103,674.53",US,32,yes
+C0037,pedro SOLIS,pedro.solis@ejemplo.com.mx,(555) 557-4700,29/05/2021,"$66,011.79",MEX,48,no
+C0008,miguel ANGEL torres,bob@invalido,555.453.0085,02/01/2022,"$42,031.38",UK,32,false
+C0009,laura MEJIA,laura.mejia@ejemplo.com,+1 5550623270,13-Jun-2022,"$60,833.07",U.K.,33,False
+C0043,JOSE antonio Lima,jose.lima@ejemplo.com.mx,555.374.5325,08/08/2023,"$238,892.09",USA,66,true
+C0011,elena VARGAS,elena.vargas@ejemplo.com,555-021-2658,2022-06-11,"$129,936.70",US,68,yes
+C0032,juan PEREZ,juan.perez@ejemplo.com,(555) 116-2252,06/08/2022,"$136,527.05",U.S.,31,1
+C0049,raul ESPINOZA,raul.espinoza@ejemplo.com.mx,+1 5553502160,15-Feb-2023,"$81,949.31",U.K.,57,False
+C0039,miguel ANGEL torres,miguel.torres@ejemplo.com,+1 5553216047,03-Dec-2023,"$62,354.47",U.K.,59,False
+C0049,raul ESPINOZA,raul.espinoza@ejemplo.com.mx,+1 5553502160,15-Feb-2023,"$81,949.31",U.K.,57,False
+C0016,hugo BENITEZ,hugo.benitez@ejemplo.com.mx,555-628-3705,2022-11-04,"$105,187.17",Mexico,43,0
+C0024,oscar VILLA,oscar.villa@ejemplo.com,+1 5553828212,30-Apr-2022,"$177,409.84",United States,25,TRUE
+C0009,laura MEJIA,laura.mejia@ejemplo.com,+1 5550623270,13-Jun-2022,"$60,833.07",U.K.,33,False
+C0007,SOFIA delgado,sofia.delgado@ejemplo.com.mx,(555) 643-4114,23/05/2024,"$57,496.57",MEX,47,no
+C0026,JAVIER nava,javier.nava@ejemplo.com,555-272-4688,2021-05-12,"$224,378.35",Mexico,66,0
+C0024,oscar VILLA,oscar.villa@ejemplo.com,+1 5553828212,30-Apr-2022,"$177,409.84",United States,25,TRUE
+C0008,miguel ANGEL torres,bob@invalido,555.453.0085,02/01/2022,"$42,031.38",UK,32,false
+C0046,paola SIERRA,paola.sierra@ejemplo.com.mx,555-036-0223,2025-01-19,"$61,982.14",Mexico,36,0
+C0027,monica ESCOBAR,monica.escobar@ejemplo.com,(555) 158-3223,22/10/2023,"$110,387.89",MEX,42,no
+C0047,hugo BENITEZ,hugo.benitez@ejemplo.com,(555) 115-3475,21/08/2021,"$201,541.24",MEX,38,no
+C0006,pedro SOLIS,pedro.solis@ejemplo.com,555-278-8251,2023-12-02,"$238,403.37",Mexico,-3,0
+C0050,veronica PINEDA,veronica.pineda@ejemplo.com,5550600876,"June 07, 2024","$23,273.94",United Kingdom,22,Y
+C0048,CLAUDIA moran,claudia.moran@ejemplo.com,555.216.3061,07/26/2024,"$144,039.52",UK,63,false
+C0006,pedro SOLIS,pedro.solis@ejemplo.com,555-278-8251,2023-12-02,"$238,403.37",Mexico,-3,0
+C0039,miguel ANGEL torres,miguel.torres@ejemplo.com,+1 5553216047,03-Dec-2023,"$62,354.47",U.K.,59,False
+C0035,carlos RUIZ,carlos.ruiz@ejemplo.com,5556740035,"February 15, 2021","$184,837.34",MX,25,si
+C0023,LILIANA parra,liliana.parra@ejemplo.com,555.500.4422,04/15/2021,"$44,346.38",USA,54,true
+C0049,raul ESPINOZA,raul.espinoza@ejemplo.com.mx,+1 5553502160,15-Feb-2023,"$81,949.31",U.K.,57,False
+C0041,ROBERTO caceres,roberto.caceres@ejemplo.com,555-260-0650,2024-09-10,"$179,947.91",US,19,yes
+C0025,adriana ROMERO,adriana.romero@ejemplo.com.mx,5555434160,"December 19, 2023","$119,088.17",MX,71,si
+C0029,SANDRA leal,sandra.leal@ejemplo.com,+1 5550150355,31-Oct-2022,"$228,867.01",U.K.,,False
+C0025,adriana ROMERO,adriana.romero@ejemplo.com.mx,5555434160,"December 19, 2023","$119,088.17",MX,71,si
+C0019,veronica PINEDA,veronica.pineda@ejemplo.com.mx,+1 5554635543,26-Dec-2022,"$74,992.23",U.K.,62,False
+C0002,MARIA lopez,maria.lopez@ejemplo.com,(555) 335-1664,29/09/2021,"$76,491.55",U.S.,45,1
+C0005,LUISA martinez,luisa.martinez@ejemplo.com,5553544182,"October 15, 2023","$47,026.90",MX,58,si
+C0012,JOSE antonio Lima,jose.lima@ejemplo.com,(555) 748-2060,22/02/2024,"$216,802.02",U.S.,57,1
+C0030,ricardo PONCE,ricardo.ponce@ejemplo.com,5557637417,"April 26, 2022","$137,252.33",United Kingdom,68,Y
+C0022,daniel FUENTES,daniel.fuentes@ejemplo.com.mx,(555) 813-5362,30/03/2021,"$199,130.07",U.S.,36,1
+C0020,ALBERTO nunez,,5556807485,"June 11, 2024","$134,874.14",United Kingdom,27,Y
+C0033,MARIA lopez,maria.lopez@ejemplo.com,555.386.0325,02/03/2022,"$133,879.59",USA,70,true
+C0003,  ana   GOMEZ ,ana.gomez@ejemplo.com,555.643.3326,11/22/2022,"$98,208.36",USA,,true
+C0005,LUISA martinez,luisa.martinez@ejemplo.com,5553544182,"October 15, 2023","$47,026.90",MX,58,si
+C0007,SOFIA delgado,sofia.delgado@ejemplo.com.mx,(555) 643-4114,23/05/2024,"$57,496.57",MEX,47,no
+C0001,juan PEREZ,juan.perez@ejemplo.com.mx,555-324-8821,2023-11-27,"$24,897.45",US,34,yes
+C0017,CLAUDIA moran,claudia.moran@ejemplo.com,(555) 273-0712,15/07/2024,"$112,565.55",MEX,66,no
+C0045,FERNANDO castro,fernando.castro@ejemplo.com,5552067458,"June 17, 2024","$32,869.12",MX,,si
+C0004,carlos RUIZ,carlos.ruiz@ejemplo.com.mx,+1 5550705210,12-Sep-2024,"$26,653.42",United States,41,TRUE
+C0047,hugo BENITEZ,hugo.benitez@ejemplo.com,(555) 115-3475,21/08/2021,"$201,541.24",MEX,38,no
+C0009,laura MEJIA,laura.mejia@ejemplo.com,+1 5550623270,13-Jun-2022,"$60,833.07",U.K.,33,False
+C0027,monica ESCOBAR,monica.escobar@ejemplo.com,(555) 158-3223,22/10/2023,"$110,387.89",MEX,42,no
+C0029,SANDRA leal,sandra.leal@ejemplo.com,+1 5550150355,31-Oct-2022,"$228,867.01",U.K.,,False
+C0026,JAVIER nava,javier.nava@ejemplo.com,555-272-4688,2021-05-12,"$224,378.35",Mexico,66,0
+C0017,CLAUDIA moran,claudia.moran@ejemplo.com,(555) 273-0712,15/07/2024,"$112,565.55",MEX,66,no
+C0012,JOSE antonio Lima,jose.lima@ejemplo.com,(555) 748-2060,22/02/2024,"$216,802.02",U.S.,57,1
+C0049,raul ESPINOZA,raul.espinoza@ejemplo.com.mx,+1 5553502160,15-Feb-2023,"$81,949.31",U.K.,57,False
+C0035,carlos RUIZ,carlos.ruiz@ejemplo.com,5556740035,"February 15, 2021","$184,837.34",MX,25,si

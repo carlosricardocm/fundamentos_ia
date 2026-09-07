@@ -1,0 +1,177 @@
+==============================================================================
+ANALISIS EXPLORATORIO DE DATOS - ventas_ecommerce.csv
+==============================================================================
+
+1. DIMENSIONES, TIPOS DE DATO Y VALORES NULOS
+------------------------------------------------------------------------------
+Filas: 260   |   Columnas: 11   |   Memoria: 141.5 KB
+
+                   tipo  no_nulos  nulos  pct_nulos  unicos
+id_pedido        object       260      0        0.0     260
+id_cliente       object       260      0        0.0     107
+nombre_cliente   object       260      0        0.0      30
+producto         object       260      0        0.0      12
+categoria        object       260      0        0.0       4
+region           object       260      0        0.0       4
+fecha_pedido     object       260      0        0.0     185
+ingreso         float64       243     17        6.5     242
+cantidad        float64       257      3        1.2       5
+descuento       float64       212     48       18.5       5
+estatus          object       260      0        0.0       3
+
+Filas con al menos un nulo: 68 (26.2%)
+Filas 100% completas:      192
+Filas duplicadas exactas:  0
+id_pedido duplicados:      0
+Rango de fechas: 2024-01-01 a 2024-12-30 (0 fechas no parseables)
+
+2. ESTADISTICA DESCRIPTIVA DE VARIABLES NUMERICAS
+------------------------------------------------------------------------------
+
+           count     mean      std  min     1%      5%      25%     50%     75%       95%       99%      max   skew  kurtosis     CV
+ingreso    243.0  714.631  760.007 -5.0  37.37  73.073  189.205  447.63  888.08  2387.182  3313.433  3999.84  1.901     3.658  1.063
+cantidad   257.0    3.311    1.357  1.0   1.00   1.000    2.000    3.00    5.00     5.000     5.000     5.00 -0.258    -1.147  0.410
+descuento  212.0    0.081    0.074  0.0   0.00   0.000    0.000    0.05    0.15     0.200     0.200     0.20  0.354    -1.323  0.921
+
+Lectura: 'ingreso' esta fuertemente sesgado a la derecha (skew=1.90, curtosis=3.66):
+         la media ($714.63) supera a la mediana ($447.63) en 60%.
+         'cantidad' y 'descuento' son en realidad DISCRETAS (5 niveles cada una):
+         cantidad en {1..5}, descuento en {0, .05, .10, .15, .20}.
+
+3. DISTRIBUCIONES
+------------------------------------------------------------------------------
+
+ingreso: n=243  media=714.631  mediana=447.630  sd=760.007  min=-5.00  max=3999.84  skew=1.90
+
+cantidad: n=257  media=3.311  mediana=3.000  sd=1.357  min=1.00  max=5.00  skew=-0.26
+
+descuento: n=212  media=0.081  mediana=0.050  sd=0.074  min=0.00  max=0.20  skew=0.35
+
+4. CORRELACIONES
+------------------------------------------------------------------------------
+
+Pearson:
+           ingreso  cantidad  descuento
+ingreso      1.000     0.360      0.043
+cantidad     0.360     1.000     -0.016
+descuento    0.043    -0.016      1.000
+
+Spearman:
+           ingreso  cantidad  descuento
+ingreso      1.000     0.378      0.021
+cantidad     0.378     1.000     -0.020
+descuento    0.021    -0.020      1.000
+
+5. TOP 5 PRODUCTOS Y DESGLOSE POR CATEGORIA Y REGION
+------------------------------------------------------------------------------
+
+Ingreso total registrado: $173,655.41
+
+Top 5 productos por ingreso (todos los estatus):
+                   sum  count     mean  pct_total
+producto                                         
+Bicicleta     40754.22     23  1771.92      23.47
+Monitor       39414.16     38  1037.21      22.70
+Laptop        33298.88     16  2081.18      19.18
+Palo de golf  21137.15     28   754.90      12.17
+Sueter         8782.51     28   313.66       5.06
+
+Top 5 productos por ingreso (solo pedidos COMPLETADOS):
+                   sum  count     mean
+producto                              
+Bicicleta     38684.57     21  1842.12
+Monitor       33240.52     32  1038.77
+Laptop        23634.42     11  2148.58
+Palo de golf  13366.05     19   703.48
+Sueter         6137.13     20   306.86
+
+Desglose por CATEGORIA:
+                  sum  count     mean  pct_total
+categoria                                       
+Electronica  77709.79     68  1142.79      44.75
+Deportes     63448.38     61  1040.14      36.54
+Ropa         20048.12     69   290.55      11.54
+Hogar        12449.12     45   276.65       7.17
+
+Desglose por REGION:
+                sum  count    mean  pct_total
+region                                       
+Centro     64687.22     83  779.36      37.25
+Occidente  40792.17     62  657.94      23.49
+Norte      38541.23     61  631.82      22.19
+Sur        29634.79     37  800.94      17.07
+
+Matriz CATEGORIA x REGION (suma de ingreso):
+region        Centro  Occidente    Norte      Sur
+categoria                                        
+Electronica  21055.0    19595.0  18943.0  18117.0
+Deportes     30306.0    13175.0  12991.0   6977.0
+Ropa         11226.0     3581.0   2985.0   2256.0
+Hogar         2100.0     4442.0   3622.0   2286.0
+
+6. VALORES ATIPICOS Y PROBLEMAS DE CALIDAD DE DATOS
+------------------------------------------------------------------------------
+
+[A] Outliers univariados de 'ingreso' (regla IQR 1.5): limites $-859.11 .. $1,936.39
+    21 pedidos (8.6% de los que tienen dato) que suman $56,212 = 32% del ingreso total.
+    Composicion: Bicicleta (10), Laptop (8), Monitor (3)
+    -> Son ventas legitimas de articulos caros (Laptop/Bicicleta/Monitor) con 4-5 unidades,
+       NO errores. No conviene eliminarlas; si acaso, modelar el ingreso en escala log.
+
+[B] Ingresos <= 0: 1 registro(s) -- VALOR IMPOSIBLE
+id_pedido  producto categoria  ingreso  cantidad   estatus
+ PED-1193 Licuadora     Hogar     -5.0       5.0 cancelado
+
+[C] Precios unitarios inverosimiles (IQR x3 DENTRO de cada producto): 4 casos
+id_pedido        producto categoria  ingreso  cantidad  precio_unit  mediana_producto  veces_mediana
+ PED-1221 Balon de futbol  Deportes   602.88         1       602.88             31.15           19.4
+ PED-1180         Lampara     Hogar   789.20         1       789.20             65.62           12.0
+ PED-1134          Sueter      Ropa   761.82         1       761.82             75.51           10.1
+ PED-1016          Sueter      Ropa   833.27         3       277.76             75.51            3.7
+    -> Estos SI parecen errores de captura: un balon de futbol a $602.88 y una
+       lampara a $789.20 no son ventas grandes, son magnitudes equivocadas.
+
+[D] Integridad referencial de cliente: ROTA
+    107 id_cliente distintos frente a solo 30 nombres distintos.
+    74 ids tienen mas de un nombre; 30 nombres se reparten entre varios ids.
+    Ejemplo: CLI-055 aparece con 7 nombres diferentes.
+    -> nombre_cliente NO sirve para identificar clientes y ninguna metrica por cliente
+       (recurrencia, LTV, RFM) es confiable con esta tabla tal como esta.
+
+[E] Estatus del pedido: 'ingreso' mezcla ventas realizadas y no realizadas
+            count        sum  pct_ingreso
+estatus                                  
+cancelado      21    9061.48         5.22
+completado    185  137620.65        79.25
+pendiente      37   26973.28        15.53
+    -> 64 pedidos (24.6%) no estan completados y aportan $36,035 (21%) al total.
+       Cualquier KPI de ventas debe filtrar estatus == 'completado'.
+
+[F] Tipos de dato: 'fecha_pedido' se lee como texto (object) y requiere to_datetime.
+    'cantidad' y 'descuento' quedan como float solo por los nulos; su dominio real
+    es entero y categorico ordenado, respectivamente.
+
+[G] Nulos: descuento 48 (18.5%), ingreso 17 (6.5%), cantidad 3 (1.2%).
+    Los 17 nulos de 'ingreso' son los mas graves: no hay precio de catalogo con el cual
+    imputarlos y sesgan a la baja toda suma. Ninguna fila tiene 2 o mas nulos a la vez.
+
+[H] Consistencia correcta: producto -> categoria es 1:1 sin excepciones; no hay
+    duplicados de id_pedido ni filas repetidas; las 260 fechas son validas y caen
+    dentro de 2024; no hay variantes de mayusculas ni espacios en categoria,
+    region ni estatus.
+
+ANEXO - Evolucion mensual:
+             ingreso  pedidos
+mes                          
+2024-01-01  12452.73       23
+2024-02-01  13277.88       19
+2024-03-01  17902.08       20
+2024-04-01  12549.55       16
+2024-05-01   8369.16       17
+2024-06-01  14448.57       23
+2024-07-01  11163.46       25
+2024-08-01  10823.61       21
+2024-09-01   8950.39       13
+2024-10-01  24665.52       29
+2024-11-01  17560.61       26
+2024-12-01  21491.85       28

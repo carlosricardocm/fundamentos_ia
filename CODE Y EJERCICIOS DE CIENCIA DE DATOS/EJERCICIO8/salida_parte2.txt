@@ -1,0 +1,111 @@
+
+==============================================================================
+5. SEGMENTACION POR DISPOSITIVO
+==============================================================================
+
+--- CONVERSION por dispositivo ---
+
+  ESCRITORIO (n control=117, n tratamiento=80)
+    control=0.504  tratamiento=0.875
+    diferencia = +37.07 pp  IC95% [+25.47, +48.67]  lift rel = +73.5%
+    z 2 proporciones: p=7.660e-08  |  p ajustado Holm = 1.532e-07  -> SIGNIFICATIVO
+    MDE del subgrupo (potencia 80%) = +19.7 pp
+
+  MOVIL (n control=95, n tratamiento=142)
+    control=0.463  tratamiento=0.852
+    diferencia = +38.90 pp  IC95% [+27.29, +50.50]  lift rel = +84.0%
+    z 2 proporciones: p=1.762e-10  |  p ajustado Holm = 5.287e-10  -> SIGNIFICATIVO
+    MDE del subgrupo (potencia 80%) = +18.3 pp
+
+  TABLETA (n control=38, n tratamiento=28)
+    control=0.605  tratamiento=0.857
+    diferencia = +25.19 pp  IC95% [+4.95, +45.42]  lift rel = +41.6%
+    z 2 proporciones: p=2.551e-02  |  p ajustado Holm = 2.551e-02  -> SIGNIFICATIVO
+    MDE del subgrupo (potencia 80%) = +28.9 pp
+
+--- INGRESO POR USUARIO por dispositivo (Mann-Whitney) ---
+
+  ESCRITORIO
+    ARPU  control=21.90  tratamiento=56.62   (medianas 6.18 vs 53.24)
+    diferencia de medias = +34.72  IC95% bootstrap [+24.54, +45.10]
+    Mann-Whitney p=1.486e-10  | Holm=2.972e-10  | delta de Cliff=+0.527  -> SIGNIFICATIVO
+
+  MOVIL
+    ARPU  control=18.47  tratamiento=53.98   (medianas 0.00 vs 47.32)
+    diferencia de medias = +35.52  IC95% bootstrap [+26.71, +44.27]
+    Mann-Whitney p=1.613e-12  | Holm=4.840e-12  | delta de Cliff=+0.534  -> SIGNIFICATIVO
+
+  TABLETA
+    ARPU  control=29.51  tratamiento=42.50   (medianas 17.83 vs 34.09)
+    diferencia de medias = +12.99  IC95% bootstrap [-4.33, +30.45]
+    Mann-Whitney p=5.605e-02  | Holm=5.605e-02  | delta de Cliff=+0.274  -> no significativo
+
+==============================================================================
+6. INTERACCION Y AJUSTE POR EL DESBALANCE DE DISPOSITIVO
+==============================================================================
+-- 6.a Homogeneidad del efecto entre estratos (Breslow-Day / Tarone) --
+   H0: el odds ratio es el mismo en los 3 dispositivos
+   Estadistico=0.6586  p=0.7194  -> NO se rechaza: el efecto es homogeneo, no hay interaccion detectable
+
+-- 6.b Cochran-Mantel-Haenszel (efecto comun ajustado por dispositivo) --
+   OR comun MH = 6.2867  IC95% [4.0242, 9.8212]
+   Riesgo relativo comun MH = 2.8243
+   CMH X2=73.1591  p=0.000e+00
+   OR crudo (sin ajustar) = 6.0454
+   -> El OR ajustado y el crudo son casi identicos: el desbalance de dispositivo
+      NO explica el resultado (no hay paradoja de Simpson).
+
+-- 6.c Regresion logistica: conversion ~ grupo + dispositivo (+ interaccion) --
+                            Coef.  Std.Err.       z   P>|z|  [0.025  0.975]
+Intercept                  0.0363    0.1703  0.2131  0.8313 -0.2974  0.3700
+C(dispositivo)[T.movil]   -0.1614    0.2278 -0.7086  0.4786 -0.6079  0.2851
+C(dispositivo)[T.tableta]  0.2722    0.3320  0.8198  0.4123 -0.3785  0.9228
+trat                       1.8470    0.2275  8.1185  0.0000  1.4011  2.2929
+
+   OR ajustado del tratamiento = 6.3407  IC95% [4.0596, 9.9035]
+   Prueba de razon de verosimilitud del termino de interaccion: LR=0.6184, gl=2, p=0.7340
+   -> sin interaccion: el efecto es consistente en los 3 dispositivos
+
+-- 6.d Efecto ATE estandarizado (reponderando a la mezcla real de trafico) --
+   Mezcla poblacional de dispositivos: escritorio=39.4%, movil=47.4%, tableta=13.2%
+   Efecto crudo (sin ajustar)      = +35.60 pp
+   Efecto estandarizado por disp.  = +36.37 pp
+   -> La correccion es minima; la conclusion no cambia.
+
+==============================================================================
+7. CHEQUEOS DE ROBUSTEZ Y BUSQUEDA DE SESGOS
+==============================================================================
+-- 7.a Prueba de permutacion de la diferencia de conversion (sin supuestos) --
+   Observado=+0.3560; permutaciones B=20,000; p=0.00000 (0 significa < 1/20000)
+
+-- 7.b Efecto por dispositivo: coherencia de signo --
+   El tratamiento gana en los 3 dispositivos -> resultado consistente,
+   no impulsado por un solo segmento.
+
+-- 7.c Estabilidad temporal (efecto por semana) --
+   semana 9: n= 14  conv control=0.286 (n= 7)  tratamiento=0.857 (n= 7)  dif=+0.571
+   semana 10: n=110  conv control=0.510 (n=51)  tratamiento=0.881 (n=59)  dif=+0.372
+   semana 11: n=120  conv control=0.538 (n=65)  tratamiento=0.909 (n=55)  dif=+0.371
+   semana 12: n=139  conv control=0.470 (n=66)  tratamiento=0.849 (n=73)  dif=+0.380
+   semana 13: n=117  conv control=0.525 (n=61)  tratamiento=0.804 (n=56)  dif=+0.279
+
+-- 7.d Covariables de comportamiento (POST-tratamiento, no usar para ajustar) --
+   corr(convirtio, duracion_sesion) = -0.0146  p=0.7439
+   corr(convirtio, paginas_vistas) = -0.0608  p=0.1743
+   Estas dos variables se miden DESPUES de ver la pagina: son resultados,
+   no covariables de base. Ajustar por ellas introduciria sesgo de colisionador.
+   Su balance entre grupos (seccion 1.c) sugiere ademas que el nuevo diseno NO
+   cambio el compromiso del usuario, solo la conversion: patron poco habitual.
+
+-- 7.e Sensibilidad a valores extremos del ingreso --
+   winsorizado al p100: dif de medias = +31.79  (Mann-Whitney p=9.26e-22)
+   winsorizado al p99: dif de medias = +31.29  (Mann-Whitney p=9.26e-22)
+   winsorizado al p95: dif de medias = +29.29  (Mann-Whitney p=9.66e-22)
+
+-- 7.f Impacto economico proyectado --
+   Con 10,000 usuarios/mes: ingreso incremental esperado = 317,876 (IC95% 255,066 a 380,708)
+   Con 100,000 usuarios/mes: ingreso incremental esperado = 3,178,756 (IC95% 2,550,661 a 3,807,084)
+   Advertencia: proyeccion valida solo si la mezcla de trafico futura se parece
+   a la del experimento y si el efecto no decae (novedad).
+
+[guardado] resultados_segmentos.csv

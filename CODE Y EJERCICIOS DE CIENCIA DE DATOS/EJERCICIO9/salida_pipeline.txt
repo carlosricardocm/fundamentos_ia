@@ -1,0 +1,347 @@
+
+==============================================================================
+0. CARGA Y DIAGNOSTICO DEL CONJUNTO
+==============================================================================
+Filas: 100   Columnas: 18
+IDs duplicados: 0
+Nulos totales: 0
+Balance del objetivo: 49.0% de abandono (49 de 100)
+
+No hay valores faltantes: la imputacion queda en el pipeline como salvaguarda para datos nuevos, pero aqui no altera nada.
+
+==============================================================================
+0b. AUDITORIA DE FUGA (antes de entrenar)
+==============================================================================
+Poder predictivo de CADA variable POR SI SOLA (tocon de decision, CV 5 pliegues):
+
+            variable  exactitud_%  pureza_max_%  n_grupo                  veredicto
+    contrato_mensual        100.0         100.0       51         SEPARADOR PERFECTO
+       tipo_contrato        100.0         100.0       51         SEPARADOR PERFECTO
+    meses_antiguedad         98.0         100.0       50 regla de un lado 100% pura
+tasa_tickets_soporte         97.0         100.0       49 regla de un lado 100% pura
+ puntaje_interaccion         95.0          98.0       51                         ok
+  dias_ultimo_acceso         94.0         100.0       44 regla de un lado 100% pura
+     tickets_soporte         90.0         100.0       39 regla de un lado 100% pura
+    grupo_antiguedad         89.0         100.0       40 regla de un lado 100% pura
+       num_productos         86.0         100.0       37 regla de un lado 100% pura
+       gasto_mensual         84.0         100.0       38 regla de un lado 100% pura
+gasto_anual_estimado         84.0         100.0       38 regla de un lado 100% pura
+ bandera_alto_riesgo         80.0         100.0       29 regla de un lado 100% pura
+         metodo_pago         56.0          60.0       35                         ok
+              region         54.0          59.1       22                         ok
+  gasto_por_producto         47.0          68.8       16                         ok
+                edad         44.0          65.0       20                         ok
+
+-- Redundancias exactas detectadas --
+  gasto_mensual <-> gasto_anual_estimado: correlacion 1.0 (b = a x 12)
+  tipo_contrato <-> contrato_mensual: contrato_mensual es la codificacion binaria de tipo_contrato
+
+>>> ALERTA: 2 variable(s) separan las clases sin error:
+      - contrato_mensual
+      - tipo_contrato
+    Cualquier modelo entrenado con ellas dara ~100% y no habra
+    aprendido nada: solo copia la regla. Se excluyen en el escenario B.
+
+-- Solape entre clases por variable numerica --
+(fraccion de clientes que caen en el rango COMPARTIDO por las dos clases)
+
+            variable     rango_clase_0     rango_clase_1  en_zona_comun_%
+    contrato_mensual            [0, 0]            [1, 1]              0.0
+    meses_antiguedad          [13, 59]           [1, 13]              4.0
+tasa_tickets_soporte        [0, 0.214]       [0.154, 11]              5.0
+ puntaje_interaccion       [9.09, 500]     [1.05, 10.53]              6.0
+  dias_ultimo_acceso           [0, 21]          [18, 94]             21.0
+       num_productos            [2, 5]            [1, 2]             33.0
+     tickets_soporte            [0, 3]           [2, 11]             33.0
+       gasto_mensual   [45.92, 209.46]    [18.42, 91.33]             45.0
+gasto_anual_estimado [551.04, 2513.52] [221.04, 1095.96]             45.0
+ bandera_alto_riesgo            [0, 0]            [0, 1]             71.0
+  gasto_por_producto    [9.18, 104.73]    [11.22, 89.13]             95.0
+                edad          [23, 67]          [22, 67]             99.0
+
+>>> ALERTA: en 4 variable(s) menos del 20% de los clientes cae en
+    la zona ambigua: contrato_mensual, meses_antiguedad, tasa_tickets_soporte, puntaje_interaccion
+    Las dos clases viven en regiones practicamente separadas del
+    espacio. Eso no ocurre en datos de churn reales.
+
+==============================================================================
+ESCENARIO A: todas las variables
+==============================================================================
+Variables usadas: 16 (12 numericas, 4 categoricas)
+  numericas   : edad, meses_antiguedad, gasto_mensual, num_productos, tickets_soporte, dias_ultimo_acceso, gasto_por_producto, tasa_tickets_soporte, puntaje_interaccion, bandera_alto_riesgo, gasto_anual_estimado, contrato_mensual
+  categoricas : tipo_contrato, metodo_pago, region, grupo_antiguedad
+
+1. Particion estratificada 80/20 -> entrenamiento 80 filas (48.8% abandono), prueba 20 filas (50.0% abandono)
+
+--- 4-5. Comparacion de los tres modelos ---
+Validacion cruzada estratificada de 5 pliegues sobre el conjunto de ENTRENAMIENTO
+(media +/- desviacion entre pliegues)
+
+modelo                             exactitud             precision                recall                    f1
+--------------------------------------------------------------------------------------------------------------
+regresion_logistica             1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+random_forest                   1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+gradient_boosting               1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+
+Mejor por F1 en validacion cruzada: regresion_logistica
+
+--- 6. Busqueda en malla ---
+Modelo ajustado : regresion_logistica
+Combinaciones probadas : 20  (100 ajustes)
+Mejores hiperparametros :
+    C                    = 0.01
+    class_weight         = None
+    solver               = lbfgs
+F1 en CV (entrenamiento) : 1.000
+F1 en CV (validacion)    : 1.000 +/- 0.000
+
+--- Evaluacion final ---
+Metricas en el conjunto de PRUEBA (nunca visto):
+    exactitud    = 1.000
+    precision    = 1.000
+    recall       = 1.000
+    f1           = 1.000
+
+Matriz de confusion   (filas = real, columnas = predicho)
+                 pred 0   pred 1
+    real 0          10        0
+    real 1           0       10
+
+El conjunto de prueba tiene 20 filas: cada acierto o error mueve las metricas 5%.
+
+--- 7. Importancia de variables ---
+Importancia nativa (|coeficiente| sobre datos escalados), agregada por variable original,
+y caida de F1 al permutar cada variable en el conjunto de PRUEBA.
+
+variable                    nativa         permutacion   grafico (nativa)
+--------------------------------------------------------------------------------------------
+contrato_mensual            11.5%     0.000 +/-0.000   ##################################
+tipo_contrato               11.5%     0.000 +/-0.000   ##################################
+grupo_antiguedad            10.6%     0.000 +/-0.000   ###############################
+meses_antiguedad             9.2%     0.000 +/-0.000   ###########################
+num_productos                7.8%     0.000 +/-0.000   #######################
+tickets_soporte              7.7%     0.000 +/-0.000   #######################
+dias_ultimo_acceso           7.4%     0.000 +/-0.000   ######################
+gasto_mensual                6.9%     0.000 +/-0.000   ####################
+gasto_anual_estimado         6.9%     0.000 +/-0.000   ####################
+bandera_alto_riesgo          6.0%     0.000 +/-0.000   ##################
+tasa_tickets_soporte         4.5%     0.000 +/-0.000   #############
+puntaje_interaccion          4.0%     0.000 +/-0.000   ############
+region                       2.3%     0.000 +/-0.000   #######
+metodo_pago                  1.8%     0.000 +/-0.000   #####
+gasto_por_producto           1.5%     0.000 +/-0.000   ####
+edad                         0.2%     0.000 +/-0.000   #
+
+Nota: la permutacion se mide sobre el conjunto de prueba; con pocas
+filas su desviacion es grande y valores cercanos a 0 no son distinguibles.
+
+==============================================================================
+ESCENARIO B: sin variables con fuga
+==============================================================================
+Variables excluidas por fuga: contrato_mensual, tipo_contrato
+Variables usadas: 14 (11 numericas, 3 categoricas)
+  numericas   : edad, meses_antiguedad, gasto_mensual, num_productos, tickets_soporte, dias_ultimo_acceso, gasto_por_producto, tasa_tickets_soporte, puntaje_interaccion, bandera_alto_riesgo, gasto_anual_estimado
+  categoricas : metodo_pago, region, grupo_antiguedad
+
+1. Particion estratificada 80/20 -> entrenamiento 80 filas (48.8% abandono), prueba 20 filas (50.0% abandono)
+
+--- 4-5. Comparacion de los tres modelos ---
+Validacion cruzada estratificada de 5 pliegues sobre el conjunto de ENTRENAMIENTO
+(media +/- desviacion entre pliegues)
+
+modelo                             exactitud             precision                recall                    f1
+--------------------------------------------------------------------------------------------------------------
+regresion_logistica             1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+random_forest                   1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+gradient_boosting               0.975 +/-0.031          0.978 +/-0.044          0.975 +/-0.050          0.975 +/-0.031
+
+Mejor por F1 en validacion cruzada: regresion_logistica
+
+--- 6. Busqueda en malla ---
+Modelo ajustado : regresion_logistica
+Combinaciones probadas : 20  (100 ajustes)
+Mejores hiperparametros :
+    C                    = 0.01
+    class_weight         = None
+    solver               = lbfgs
+F1 en CV (entrenamiento) : 1.000
+F1 en CV (validacion)    : 1.000 +/- 0.000
+
+--- Evaluacion final ---
+Metricas en el conjunto de PRUEBA (nunca visto):
+    exactitud    = 1.000
+    precision    = 1.000
+    recall       = 1.000
+    f1           = 1.000
+
+Matriz de confusion   (filas = real, columnas = predicho)
+                 pred 0   pred 1
+    real 0          10        0
+    real 1           0       10
+
+El conjunto de prueba tiene 20 filas: cada acierto o error mueve las metricas 5%.
+
+--- 7. Importancia de variables ---
+Importancia nativa (|coeficiente| sobre datos escalados), agregada por variable original,
+y caida de F1 al permutar cada variable en el conjunto de PRUEBA.
+
+variable                    nativa         permutacion   grafico (nativa)
+--------------------------------------------------------------------------------------------
+grupo_antiguedad            13.9%     0.000 +/-0.000   ##################################
+meses_antiguedad            12.0%     0.018 +/-0.025   #############################
+num_productos               10.2%     0.013 +/-0.022   #########################
+tickets_soporte             10.0%     0.000 +/-0.000   ########################
+dias_ultimo_acceso           9.6%     0.000 +/-0.000   ########################
+gasto_mensual                8.9%     0.009 +/-0.020   ######################
+gasto_anual_estimado         8.9%     0.009 +/-0.020   ######################
+bandera_alto_riesgo          7.7%     0.000 +/-0.000   ###################
+tasa_tickets_soporte         5.9%     0.000 +/-0.000   ##############
+puntaje_interaccion          5.2%     0.000 +/-0.000   #############
+region                       3.0%     0.000 +/-0.000   #######
+metodo_pago                  2.3%     0.000 +/-0.000   ######
+gasto_por_producto           2.0%     0.000 +/-0.000   #####
+edad                         0.3%     0.000 +/-0.000   #
+
+Nota: la permutacion se mide sobre el conjunto de prueba; con pocas
+filas su desviacion es grande y valores cercanos a 0 no son distinguibles.
+
+==============================================================================
+ESCENARIO C: solo variables crudas
+==============================================================================
+Variables excluidas por fuga: bandera_alto_riesgo, contrato_mensual, gasto_anual_estimado, gasto_por_producto, grupo_antiguedad, puntaje_interaccion, tasa_tickets_soporte, tipo_contrato
+Variables usadas: 8 (6 numericas, 2 categoricas)
+  numericas   : edad, meses_antiguedad, gasto_mensual, num_productos, tickets_soporte, dias_ultimo_acceso
+  categoricas : metodo_pago, region
+
+1. Particion estratificada 80/20 -> entrenamiento 80 filas (48.8% abandono), prueba 20 filas (50.0% abandono)
+
+--- 4-5. Comparacion de los tres modelos ---
+Validacion cruzada estratificada de 5 pliegues sobre el conjunto de ENTRENAMIENTO
+(media +/- desviacion entre pliegues)
+
+modelo                             exactitud             precision                recall                    f1
+--------------------------------------------------------------------------------------------------------------
+regresion_logistica             1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+random_forest                   1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000          1.000 +/-0.000
+gradient_boosting               0.988 +/-0.025          0.978 +/-0.044          1.000 +/-0.000          0.988 +/-0.024
+
+Mejor por F1 en validacion cruzada: regresion_logistica
+
+--- 6. Busqueda en malla ---
+Modelo ajustado : regresion_logistica
+Combinaciones probadas : 20  (100 ajustes)
+Mejores hiperparametros :
+    C                    = 0.01
+    class_weight         = None
+    solver               = liblinear
+F1 en CV (entrenamiento) : 1.000
+F1 en CV (validacion)    : 1.000 +/- 0.000
+
+--- Evaluacion final ---
+Metricas en el conjunto de PRUEBA (nunca visto):
+    exactitud    = 1.000
+    precision    = 1.000
+    recall       = 1.000
+    f1           = 1.000
+
+Matriz de confusion   (filas = real, columnas = predicho)
+                 pred 0   pred 1
+    real 0          10        0
+    real 1           0       10
+
+El conjunto de prueba tiene 20 filas: cada acierto o error mueve las metricas 5%.
+
+--- 7. Importancia de variables ---
+Importancia nativa (|coeficiente| sobre datos escalados), agregada por variable original,
+y caida de F1 al permutar cada variable en el conjunto de PRUEBA.
+
+variable                    nativa         permutacion   grafico (nativa)
+--------------------------------------------------------------------------------------------
+meses_antiguedad            20.5%     0.018 +/-0.025   ##################################
+tickets_soporte             18.0%     0.009 +/-0.018   ##############################
+num_productos               17.9%     0.026 +/-0.030   ##############################
+dias_ultimo_acceso          17.3%     0.005 +/-0.014   #############################
+gasto_mensual               16.2%     0.014 +/-0.023   ###########################
+region                       5.3%     0.000 +/-0.000   #########
+metodo_pago                  4.1%     0.000 +/-0.000   #######
+edad                         0.7%     0.000 +/-0.000   #
+
+Nota: la permutacion se mide sobre el conjunto de prueba; con pocas
+filas su desviacion es grande y valores cercanos a 0 no son distinguibles.
+
+==============================================================================
+CONTROL: ETIQUETAS BARAJADAS
+==============================================================================
+Regresion logistica sobre las variables crudas:
+    F1 con el objetivo real     = 0.990
+    F1 con el objetivo barajado = 0.413
+
+El control cae al nivel del azar: el pipeline NO tiene fuga de
+preprocesamiento. La exactitud perfecta viene de los datos.
+
+==============================================================================
+8. GUARDADO DEL MODELO
+==============================================================================
+Archivo   : modelo_churn.pkl (7 KB)
+Escenario : B - sin variables con fuga
+Modelo    : regresion_logistica
+Variables : 14 -> edad, meses_antiguedad, gasto_mensual, num_productos, tickets_soporte, dias_ultimo_acceso, gasto_por_producto, tasa_tickets_soporte, puntaje_interaccion, bandera_alto_riesgo, gasto_anual_estimado, metodo_pago, region, grupo_antiguedad
+
+El pkl es un diccionario. Para usarlo:
+    import joblib, pandas as pd
+    c = joblib.load('modelo_churn.pkl')
+    pred = c['modelo'].predict(nuevos[c['variables']])
+
+El pipeline guardado incluye imputacion, codificacion y escalado:
+se le pasa el DataFrame crudo con esas columnas, sin preprocesar.
+
+==============================================================================
+VEREDICTO
+==============================================================================
+escenario                             modelo                   F1 CV   F1 prueba   exactitud prueba
+---------------------------------------------------------------------------------------------------
+A. todas las variables (16 vars)      regresion_logistica      1.000       1.000              1.000
+B. sin variables con fuga (14 vars)   regresion_logistica      1.000       1.000              1.000
+C. solo variables crudas (8 vars)     regresion_logistica      1.000       1.000              1.000
+
+1) QUE MODELO GANA
+   regresion_logistica en los tres escenarios. Con 80 filas de entrenamiento y clases
+   casi separables, un modelo lineal regularizado es el mas estable: el
+   bosque y el boosting no tienen nada extra que capturar y pagan varianza.
+   La malla eligio C = 0.01 (regularizacion fuerte), sintoma de que la
+   frontera es amplia y no hace falta ajustarse a los datos.
+
+2) LAS METRICAS SON SOSPECHOSAS. NO USE ESTE MODELO EN PRODUCCION.
+   a) Fuga directa: contrato_mensual y tipo_contrato separan las clases sin un solo error
+      en los 100 registros (anual -> 0% de abandono, mensual -> 100%).
+      Son la misma columna codificada dos veces.
+   b) Quitarlas NO baja las metricas (escenario B sigue en 1.000).
+      El problema no eran dos columnas.
+   c) Con SOLO las variables crudas, sin nada derivado, el F1 sigue en
+      1.000 (escenario C). Las dos clases ocupan rangos casi disjuntos
+      (ver la tabla de solape): el conjunto es sintetico y se genero
+      muestreando cada clase de una distribucion distinta.
+   d) El control con etiquetas barajadas cae a F1 = 0.413 frente a 0.990
+      con las reales: el pipeline esta bien construido. El 1.000 es de
+      los datos, no de un error de codigo.
+
+3) QUE ESPERAR CON DATOS REALES
+   Un modelo de churn decente en produccion ronda 0.60-0.80 de AUC y
+   rara vez pasa de 0.70 de F1. Un 1.000 nunca es una buena noticia:
+   es una senal de que la respuesta esta dentro de la entrada.
+
+4) OTRAS LIMITACIONES
+   - n = 100 filas; la prueba son 20 clientes. Un acierto vale 5 puntos
+     porcentuales, asi que ninguna metrica tiene tres decimales de sentido.
+   - Diferencias menores a 0.05 en F1 entre modelos no son distinguibles.
+   - Clases balanceadas 49/51; en churn real es 5-25%. Con esa proporcion
+     habria que revisar el umbral, usar class_weight y mirar PR-AUC.
+   - Redundancias exactas (gasto_anual = gasto_mensual x 12): reparten la
+     importancia entre columnas gemelas y no aportan informacion nueva.
+
+5) RECOMENDACION
+   modelo_churn.pkl guarda el escenario B, que es el unico defendible de
+   los tres, pero sirve como plantilla de codigo, no como modelo. Antes de
+   creer cualquier numero: regenerar los datos con solape realista entre
+   clases, o traer datos reales, y volver a correr este mismo script.
+   La auditoria de las secciones 0b y de control es la parte reutilizable.

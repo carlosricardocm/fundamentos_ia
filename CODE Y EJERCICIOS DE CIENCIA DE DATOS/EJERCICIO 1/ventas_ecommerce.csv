@@ -1,0 +1,261 @@
+id_pedido,id_cliente,nombre_cliente,producto,categoria,region,fecha_pedido,ingreso,cantidad,descuento,estatus
+PED-1000,CLI-018,Cecilia Arce,Chamarra,Ropa,Norte,2024-12-02,360.4,2,0.0,completado
+PED-1001,CLI-086,Luis Herrera,Bicicleta,Deportes,Norte,2024-10-30,526.47,2,,completado
+PED-1002,CLI-071,Elena Quiroz,Licuadora,Hogar,Occidente,2024-07-03,566.05,3,0.15,completado
+PED-1003,CLI-028,Hector Silva,Jeans,Ropa,Centro,2024-12-12,153.36,5,,completado
+PED-1004,CLI-006,Marisol Vega,Monitor,Electronica,Norte,2024-10-31,618.43,2,0.05,completado
+PED-1005,CLI-029,Elena Quiroz,Juego de sabanas,Hogar,Occidente,2024-07-30,210.19,5,,pendiente
+PED-1006,CLI-078,Jorge Estrada,Chamarra,Ropa,Occidente,2024-07-06,,4,0.2,completado
+PED-1007,CLI-008,Diana Rojas,Chamarra,Ropa,Centro,2024-03-01,370.51,3,,completado
+PED-1008,CLI-028,Nestor Aguilar,Monitor,Electronica,Sur,2024-05-18,1170.92,4,0.0,completado
+PED-1009,CLI-093,Jorge Estrada,Bicicleta,Deportes,Centro,2024-12-16,1689.27,2,0.2,completado
+PED-1010,CLI-079,Marisol Vega,Palo de golf,Deportes,Sur,2024-04-15,881.87,3,,completado
+PED-1011,CLI-115,Sergio Barrios,Lampara,Hogar,Norte,2024-08-14,150.77,2,0.15,completado
+PED-1012,CLI-011,Felipe Campos,Sueter,Ropa,Centro,2024-10-19,242.01,3,0.05,cancelado
+PED-1013,CLI-087,Rocio Cabrera,Licuadora,Hogar,Norte,2024-07-08,537.37,4,0.1,completado
+PED-1014,CLI-021,Ulises Perea,Bicicleta,Deportes,Sur,2024-07-09,,1,0.2,completado
+PED-1015,CLI-102,Carlos Bello,Audifonos,Electronica,Norte,2024-09-20,,4,0.0,cancelado
+PED-1016,CLI-079,Valeria Nino,Sueter,Ropa,Occidente,2024-05-01,833.27,3,0.15,completado
+PED-1017,CLI-038,Diana Rojas,Monitor,Electronica,Norte,2024-02-01,1043.6,4,0.2,completado
+PED-1018,CLI-053,Damian Ortiz,Licuadora,Hogar,Occidente,2024-12-07,241.3,3,0.1,completado
+PED-1019,CLI-102,Damian Ortiz,Sueter,Ropa,Norte,2024-04-08,482.06,3,0.2,completado
+PED-1020,CLI-077,Quetzal Marin,Chamarra,Ropa,Centro,2024-01-05,385.53,5,0.15,completado
+PED-1021,CLI-002,Jorge Estrada,Palo de golf,Deportes,Occidente,2024-09-26,809.01,5,0.15,completado
+PED-1022,CLI-014,Ximena Gil,Juego de sabanas,Hogar,Norte,2024-11-01,433.36,3,0.1,completado
+PED-1023,CLI-082,Bruno Cortes,Lampara,Hogar,Norte,2024-03-30,344.49,5,0.0,completado
+PED-1024,CLI-018,Irene Padilla,Chamarra,Ropa,Norte,2024-08-27,,3,0.0,cancelado
+PED-1025,CLI-116,Hector Silva,Laptop,Electronica,Occidente,2024-03-30,458.93,1,,pendiente
+PED-1026,CLI-097,Yolanda Prieto,Bicicleta,Deportes,Norte,2024-11-01,3196.63,4,0.05,completado
+PED-1027,CLI-066,Sergio Barrios,Monitor,Electronica,Occidente,2024-06-12,445.55,2,0.0,completado
+PED-1028,CLI-089,Pablo Duarte,Laptop,Electronica,Sur,2024-12-23,2387.02,5,,completado
+PED-1029,CLI-056,Valeria Nino,Jeans,Ropa,Norte,2024-05-15,73.73,1,0.0,pendiente
+PED-1030,CLI-023,Hector Silva,Jeans,Ropa,Centro,2024-08-20,466.93,4,,pendiente
+PED-1031,CLI-065,Ulises Perea,Juego de sabanas,Hogar,Sur,2024-06-10,117.07,1,0.2,completado
+PED-1032,CLI-018,Carlos Bello,Palo de golf,Deportes,Norte,2024-02-13,210.84,1,,completado
+PED-1033,CLI-049,Tania Lozano,Palo de golf,Deportes,Centro,2024-02-26,325.16,2,0.05,completado
+PED-1034,CLI-027,Irene Padilla,Bicicleta,Deportes,Centro,2024-06-01,2577.01,5,0.0,completado
+PED-1035,CLI-066,Tania Lozano,Laptop,Electronica,Sur,2024-08-13,,2,0.0,completado
+PED-1036,CLI-095,Pablo Duarte,Monitor,Electronica,Centro,2024-05-11,718.33,2,0.15,completado
+PED-1037,CLI-089,Pablo Duarte,Bicicleta,Deportes,Occidente,2024-03-30,3222.39,4,,completado
+PED-1038,CLI-101,Bruno Cortes,Audifonos,Electronica,Norte,2024-11-03,243.42,3,0.0,completado
+PED-1039,CLI-008,Walter Cuevas,Jeans,Ropa,Norte,2024-06-08,,2,0.15,completado
+PED-1040,CLI-103,Ulises Perea,Bicicleta,Deportes,Centro,2024-02-13,1513.27,4,,completado
+PED-1041,CLI-093,Ulises Perea,Licuadora,Hogar,Sur,2024-10-01,754.57,,0.05,completado
+PED-1042,CLI-077,Olivia Ramos,Jeans,Ropa,Norte,2024-02-29,141.31,5,0.05,completado
+PED-1043,CLI-097,Elena Quiroz,Palo de golf,Deportes,Norte,2024-07-02,1714.73,5,0.05,pendiente
+PED-1044,CLI-048,Olivia Ramos,Licuadora,Hogar,Norte,2024-06-20,233.65,5,0.0,completado
+PED-1045,CLI-024,Irene Padilla,Licuadora,Hogar,Centro,2024-12-29,112.45,1,0.1,completado
+PED-1046,CLI-060,Zacarias Luna,Palo de golf,Deportes,Sur,2024-08-20,894.29,4,,pendiente
+PED-1047,CLI-090,Quetzal Marin,Palo de golf,Deportes,Centro,2024-12-05,867.0,4,0.2,completado
+PED-1048,CLI-058,Monica Salas,Jeans,Ropa,Centro,2024-11-27,219.3,2,0.0,completado
+PED-1049,CLI-063,Carlos Bello,Monitor,Electronica,Centro,2024-12-30,1478.48,5,0.2,completado
+PED-1050,CLI-076,Hector Silva,Laptop,Electronica,Occidente,2024-01-10,1923.12,4,0.15,completado
+PED-1051,CLI-050,Irene Padilla,Monitor,Electronica,Sur,2024-07-10,878.91,3,0.1,completado
+PED-1052,CLI-118,Tania Lozano,Chamarra,Ropa,Sur,2024-11-25,625.19,4,,pendiente
+PED-1053,CLI-061,Valeria Nino,Jeans,Ropa,Centro,2024-08-25,557.13,5,0.1,completado
+PED-1054,CLI-079,Yolanda Prieto,Jeans,Ropa,Sur,2024-09-24,,5,0.1,completado
+PED-1055,CLI-116,Olivia Ramos,Chamarra,Ropa,Occidente,2024-11-09,130.1,2,0.05,pendiente
+PED-1056,CLI-118,Gabriela Nunez,Bicicleta,Deportes,Occidente,2024-07-21,728.4,2,0.0,completado
+PED-1057,CLI-115,Luis Herrera,Sueter,Ropa,Norte,2024-12-06,355.55,5,,completado
+PED-1058,CLI-086,Luis Fernandez,Monitor,Electronica,Norte,2024-10-19,1966.57,4,0.2,completado
+PED-1059,CLI-115,Pablo Duarte,Monitor,Electronica,Sur,2024-07-12,867.0,2,0.0,completado
+PED-1060,CLI-049,Monica Salas,Jeans,Ropa,Centro,2024-11-07,465.21,4,,completado
+PED-1061,CLI-014,Irene Padilla,Bicicleta,Deportes,Occidente,2024-11-12,1953.53,5,,completado
+PED-1062,CLI-011,Quetzal Marin,Sueter,Ropa,Centro,2024-12-30,208.52,4,,pendiente
+PED-1063,CLI-103,Valeria Nino,Chamarra,Ropa,Centro,2024-01-23,237.95,3,0.05,cancelado
+PED-1064,CLI-110,Marisol Vega,Sueter,Ropa,Norte,2024-01-25,159.68,3,,completado
+PED-1065,CLI-054,Monica Salas,Sueter,Ropa,Occidente,2024-12-17,59.02,1,0.15,completado
+PED-1066,CLI-065,Quetzal Marin,Sueter,Ropa,Occidente,2024-04-28,150.8,3,0.0,completado
+PED-1067,CLI-004,Irene Padilla,Palo de golf,Deportes,Norte,2024-04-19,849.25,3,0.0,completado
+PED-1068,CLI-019,Hector Silva,Monitor,Electronica,Occidente,2024-10-16,446.23,1,0.1,completado
+PED-1069,CLI-031,Yolanda Prieto,Bicicleta,Deportes,Occidente,2024-04-07,1658.76,3,0.15,completado
+PED-1070,CLI-023,Jorge Estrada,Audifonos,Electronica,Centro,2024-12-14,266.53,3,0.2,completado
+PED-1071,CLI-036,Luis Herrera,Palo de golf,Deportes,Norte,2024-07-27,337.83,3,,completado
+PED-1072,CLI-055,Zacarias Luna,Licuadora,Hogar,Centro,2024-02-10,420.87,5,0.15,completado
+PED-1073,CLI-059,Luis Fernandez,Audifonos,Electronica,Centro,2024-02-25,108.77,1,0.0,completado
+PED-1074,CLI-014,Irene Padilla,Monitor,Electronica,Centro,2024-06-27,,2,0.05,completado
+PED-1075,CLI-028,Jorge Estrada,Palo de golf,Deportes,Norte,2024-11-29,943.0,3,0.05,completado
+PED-1076,CLI-082,Olivia Ramos,Palo de golf,Deportes,Centro,2024-01-18,,5,0.2,cancelado
+PED-1077,CLI-003,Cecilia Arce,Jeans,Ropa,Norte,2024-12-06,150.51,4,,completado
+PED-1078,CLI-004,Marisol Vega,Sueter,Ropa,Centro,2024-07-26,169.62,5,0.15,completado
+PED-1079,CLI-055,Diana Rojas,Chamarra,Ropa,Sur,2024-12-29,308.48,5,,completado
+PED-1080,CLI-031,Cecilia Arce,Jeans,Ropa,Centro,2024-12-25,222.3,2,0.15,completado
+PED-1081,CLI-036,Gabriela Nunez,Palo de golf,Deportes,Centro,2024-08-20,924.12,5,,completado
+PED-1082,CLI-010,Valeria Nino,Licuadora,Hogar,Sur,2024-03-01,181.88,5,0.2,completado
+PED-1083,CLI-018,Rocio Cabrera,Laptop,Electronica,Norte,2024-10-10,2928.13,4,0.0,pendiente
+PED-1084,CLI-084,Hector Silva,Monitor,Electronica,Norte,2024-01-02,957.29,,0.1,cancelado
+PED-1085,CLI-011,Bruno Cortes,Monitor,Electronica,Centro,2024-03-01,1681.91,5,0.1,pendiente
+PED-1086,CLI-033,Karla Mendoza,Jeans,Ropa,Occidente,2024-08-30,35.53,1,0.0,completado
+PED-1087,CLI-101,Hector Silva,Bicicleta,Deportes,Sur,2024-03-08,505.25,1,,pendiente
+PED-1088,CLI-048,Irene Padilla,Laptop,Electronica,Occidente,2024-10-03,2387.2,3,0.0,completado
+PED-1089,CLI-044,Pablo Duarte,Balon de futbol,Deportes,Centro,2024-12-08,97.73,3,0.0,pendiente
+PED-1090,CLI-107,Karla Mendoza,Laptop,Electronica,Norte,2024-12-16,2571.98,4,0.15,completado
+PED-1091,CLI-042,Olivia Ramos,Jeans,Ropa,Sur,2024-08-23,120.59,1,0.2,completado
+PED-1092,CLI-046,Quetzal Marin,Bicicleta,Deportes,Centro,2024-10-12,2165.2,4,0.05,completado
+PED-1093,CLI-061,Marisol Vega,Palo de golf,Deportes,Norte,2024-06-06,350.65,1,,pendiente
+PED-1094,CLI-003,Cecilia Arce,Palo de golf,Deportes,Centro,2024-11-19,967.4,3,,completado
+PED-1095,CLI-002,Sergio Barrios,Sueter,Ropa,Occidente,2024-07-03,138.51,2,0.05,completado
+PED-1096,CLI-024,Jorge Estrada,Palo de golf,Deportes,Sur,2024-02-29,178.45,1,0.0,completado
+PED-1097,CLI-057,Walter Cuevas,Monitor,Electronica,Occidente,2024-05-05,931.69,2,,completado
+PED-1098,CLI-025,Nestor Aguilar,Monitor,Electronica,Norte,2024-04-04,734.3,3,,completado
+PED-1099,CLI-107,Carlos Bello,Juego de sabanas,Hogar,Norte,2024-02-19,394.83,3,,completado
+PED-1100,CLI-092,Sergio Barrios,Lampara,Hogar,Occidente,2024-12-24,181.8,2,,cancelado
+PED-1101,CLI-052,Marisol Vega,Jeans,Ropa,Occidente,2024-09-28,39.91,1,0.1,completado
+PED-1102,CLI-066,Carlos Bello,Audifonos,Electronica,Centro,2024-11-06,131.44,3,0.1,completado
+PED-1103,CLI-014,Walter Cuevas,Juego de sabanas,Hogar,Sur,2024-01-16,223.79,4,0.0,completado
+PED-1104,CLI-113,Luis Fernandez,Chamarra,Ropa,Occidente,2024-04-06,335.24,4,0.1,completado
+PED-1105,CLI-106,Valeria Nino,Jeans,Ropa,Occidente,2024-07-28,66.21,1,0.2,completado
+PED-1106,CLI-041,Irene Padilla,Bicicleta,Deportes,Occidente,2024-02-28,517.77,4,0.0,completado
+PED-1107,CLI-055,Pablo Duarte,Audifonos,Electronica,Centro,2024-10-28,653.16,5,0.05,completado
+PED-1108,CLI-016,Zacarias Luna,Monitor,Electronica,Norte,2024-12-13,505.89,2,0.05,completado
+PED-1109,CLI-046,Carlos Bello,Lampara,Hogar,Occidente,2024-01-01,91.55,3,,completado
+PED-1110,CLI-073,Tania Lozano,Bicicleta,Deportes,Occidente,2024-03-09,2304.35,5,0.0,completado
+PED-1111,CLI-100,Cecilia Arce,Audifonos,Electronica,Centro,2024-07-23,619.73,5,,completado
+PED-1112,CLI-042,Tania Lozano,Palo de golf,Deportes,Norte,2024-10-16,1496.19,5,0.0,pendiente
+PED-1113,CLI-067,Elena Quiroz,Sueter,Ropa,Centro,2024-11-16,289.9,5,0.0,completado
+PED-1114,CLI-055,Olivia Ramos,Laptop,Electronica,Occidente,2024-05-23,863.34,2,0.1,completado
+PED-1115,CLI-079,Rocio Cabrera,Licuadora,Hogar,Centro,2024-08-12,219.9,2,0.2,completado
+PED-1116,CLI-042,Rocio Cabrera,Chamarra,Ropa,Centro,2024-01-15,266.23,3,0.0,pendiente
+PED-1117,CLI-091,Tania Lozano,Jeans,Ropa,Centro,2024-05-11,559.23,5,0.2,completado
+PED-1118,CLI-044,Diana Rojas,Bicicleta,Deportes,Centro,2024-09-19,2450.47,4,,completado
+PED-1119,CLI-084,Monica Salas,Sueter,Ropa,Centro,2024-04-04,848.29,5,0.0,completado
+PED-1120,CLI-012,Jorge Estrada,Sueter,Ropa,Centro,2024-01-08,489.78,5,0.15,completado
+PED-1121,CLI-110,Ulises Perea,Sueter,Ropa,Norte,2024-11-13,88.07,,0.0,completado
+PED-1122,CLI-017,Walter Cuevas,Monitor,Electronica,Centro,2024-03-14,663.89,4,,cancelado
+PED-1123,CLI-037,Sergio Barrios,Bicicleta,Deportes,Centro,2024-09-19,3112.14,4,0.2,completado
+PED-1124,CLI-048,Valeria Nino,Monitor,Electronica,Sur,2024-11-15,1061.9,3,0.05,completado
+PED-1125,CLI-103,Quetzal Marin,Balon de futbol,Deportes,Centro,2024-06-10,189.55,3,0.1,completado
+PED-1126,CLI-041,Jorge Estrada,Palo de golf,Deportes,Occidente,2024-11-03,,5,0.0,cancelado
+PED-1127,CLI-076,Nestor Aguilar,Laptop,Electronica,Norte,2024-08-09,,4,0.1,completado
+PED-1128,CLI-035,Irene Padilla,Monitor,Electronica,Occidente,2024-03-20,1098.23,4,0.0,completado
+PED-1129,CLI-055,Ximena Gil,Sueter,Ropa,Occidente,2024-03-26,558.76,5,0.0,completado
+PED-1130,CLI-093,Irene Padilla,Laptop,Electronica,Norte,2024-03-11,1839.42,4,0.0,cancelado
+PED-1131,CLI-076,Marisol Vega,Lampara,Hogar,Norte,2024-08-02,212.24,3,0.15,cancelado
+PED-1132,CLI-033,Valeria Nino,Sueter,Ropa,Norte,2024-10-30,182.41,2,0.0,completado
+PED-1133,CLI-096,Tania Lozano,Palo de golf,Deportes,Occidente,2024-01-09,684.3,3,,completado
+PED-1134,CLI-062,Jorge Estrada,Sueter,Ropa,Centro,2024-04-26,761.82,1,,cancelado
+PED-1135,CLI-039,Ximena Gil,Monitor,Electronica,Occidente,2024-11-26,623.06,3,0.15,completado
+PED-1136,CLI-050,Felipe Campos,Juego de sabanas,Hogar,Occidente,2024-06-28,326.68,5,0.0,pendiente
+PED-1137,CLI-037,Quetzal Marin,Balon de futbol,Deportes,Norte,2024-07-05,47.95,1,0.0,completado
+PED-1138,CLI-001,Karla Mendoza,Chamarra,Ropa,Occidente,2024-08-26,274.91,2,0.05,completado
+PED-1139,CLI-067,Quetzal Marin,Monitor,Electronica,Occidente,2024-01-16,254.82,1,0.0,pendiente
+PED-1140,CLI-048,Gabriela Nunez,Balon de futbol,Deportes,Sur,2024-07-03,,3,0.15,pendiente
+PED-1141,CLI-078,Walter Cuevas,Balon de futbol,Deportes,Norte,2024-10-04,86.69,3,0.0,completado
+PED-1142,CLI-022,Ulises Perea,Lampara,Hogar,Norte,2024-12-27,67.19,2,0.2,completado
+PED-1143,CLI-115,Elena Quiroz,Sueter,Ropa,Occidente,2024-06-14,218.4,4,,pendiente
+PED-1144,CLI-027,Ana Torres,Bicicleta,Deportes,Centro,2024-07-25,2188.05,4,0.05,completado
+PED-1145,CLI-112,Sergio Barrios,Audifonos,Electronica,Centro,2024-08-14,518.74,5,0.0,completado
+PED-1146,CLI-051,Diana Rojas,Palo de golf,Deportes,Norte,2024-05-20,742.86,2,0.0,completado
+PED-1147,CLI-102,Luis Herrera,Balon de futbol,Deportes,Norte,2024-01-04,89.17,3,,completado
+PED-1148,CLI-108,Marisol Vega,Bicicleta,Deportes,Centro,2024-06-20,1564.4,3,0.2,pendiente
+PED-1149,CLI-056,Felipe Campos,Monitor,Electronica,Sur,2024-01-10,915.58,5,0.0,completado
+PED-1150,CLI-012,Marisol Vega,Licuadora,Hogar,Occidente,2024-02-19,277.09,5,0.0,completado
+PED-1151,CLI-042,Hector Silva,Lampara,Hogar,Sur,2024-06-01,76.22,2,,completado
+PED-1152,CLI-107,Luis Herrera,Laptop,Electronica,Sur,2024-02-12,3811.24,5,0.05,completado
+PED-1153,CLI-084,Pablo Duarte,Sueter,Ropa,Occidente,2024-06-10,91.13,1,0.0,pendiente
+PED-1154,CLI-049,Cecilia Arce,Monitor,Electronica,Norte,2024-10-21,670.17,2,,completado
+PED-1155,CLI-115,Luis Fernandez,Jeans,Ropa,Centro,2024-10-17,513.74,5,0.1,cancelado
+PED-1156,CLI-016,Ximena Gil,Palo de golf,Deportes,Centro,2024-11-12,463.8,3,0.1,completado
+PED-1157,CLI-046,Cecilia Arce,Jeans,Ropa,Occidente,2024-09-23,130.82,2,0.05,completado
+PED-1158,CLI-040,Irene Padilla,Jeans,Ropa,Centro,2024-08-28,288.13,4,0.05,completado
+PED-1159,CLI-037,Diana Rojas,Chamarra,Ropa,Sur,2024-12-19,215.93,2,,completado
+PED-1160,CLI-026,Pablo Duarte,Monitor,Electronica,Occidente,2024-10-28,1998.87,5,0.0,completado
+PED-1161,CLI-102,Luis Fernandez,Lampara,Hogar,Occidente,2024-12-02,171.85,3,0.1,cancelado
+PED-1162,CLI-001,Marisol Vega,Audifonos,Electronica,Sur,2024-01-10,159.19,5,0.0,completado
+PED-1163,CLI-069,Ximena Gil,Monitor,Electronica,Centro,2024-11-17,578.31,5,,completado
+PED-1164,CLI-045,Nestor Aguilar,Sueter,Ropa,Centro,2024-10-09,300.54,5,0.0,completado
+PED-1165,CLI-103,Felipe Campos,Palo de golf,Deportes,Centro,2024-12-17,1132.31,3,0.2,pendiente
+PED-1166,CLI-045,Hector Silva,Licuadora,Hogar,Occidente,2024-07-25,149.61,3,0.15,completado
+PED-1167,CLI-016,Carlos Bello,Licuadora,Hogar,Occidente,2024-03-21,306.07,4,0.2,completado
+PED-1168,CLI-035,Damian Ortiz,Palo de golf,Deportes,Centro,2024-07-08,184.59,1,0.05,completado
+PED-1169,CLI-095,Sergio Barrios,Juego de sabanas,Hogar,Norte,2024-07-31,187.69,4,0.05,completado
+PED-1170,CLI-063,Olivia Ramos,Palo de golf,Deportes,Norte,2024-05-05,836.8,5,0.1,completado
+PED-1171,CLI-030,Marisol Vega,Balon de futbol,Deportes,Sur,2024-12-27,181.52,5,0.2,cancelado
+PED-1172,CLI-077,Gabriela Nunez,Audifonos,Electronica,Occidente,2024-07-14,546.86,5,0.05,completado
+PED-1173,CLI-063,Cecilia Arce,Lampara,Hogar,Norte,2024-04-23,111.0,5,0.2,completado
+PED-1174,CLI-101,Damian Ortiz,Laptop,Electronica,Centro,2024-02-26,1653.97,4,0.0,pendiente
+PED-1175,CLI-119,Luis Herrera,Monitor,Electronica,Occidente,2024-04-15,1807.17,5,0.0,completado
+PED-1176,CLI-023,Ulises Perea,Bicicleta,Deportes,Sur,2024-11-12,1700.07,4,0.1,completado
+PED-1177,CLI-076,Carlos Bello,Juego de sabanas,Hogar,Occidente,2024-04-19,703.17,5,0.1,cancelado
+PED-1178,CLI-066,Walter Cuevas,Lampara,Hogar,Centro,2024-06-25,188.86,2,0.2,completado
+PED-1179,CLI-087,Marisol Vega,Jeans,Ropa,Sur,2024-09-21,121.02,2,0.05,completado
+PED-1180,CLI-112,Zacarias Luna,Lampara,Hogar,Occidente,2024-03-16,789.2,1,,completado
+PED-1181,CLI-005,Hector Silva,Lampara,Hogar,Norte,2024-05-09,124.7,2,0.0,cancelado
+PED-1182,CLI-008,Hector Silva,Balon de futbol,Deportes,Sur,2024-07-15,121.35,5,0.15,cancelado
+PED-1183,CLI-075,Damian Ortiz,Palo de golf,Deportes,Centro,2024-02-10,600.8,2,0.0,pendiente
+PED-1184,CLI-028,Jorge Estrada,Chamarra,Ropa,Centro,2024-10-08,432.77,3,0.05,completado
+PED-1185,CLI-020,Nestor Aguilar,Jeans,Ropa,Norte,2024-10-07,61.57,1,0.15,completado
+PED-1186,CLI-021,Rocio Cabrera,Palo de golf,Deportes,Centro,2024-06-30,1469.08,5,0.0,completado
+PED-1187,CLI-062,Olivia Ramos,Monitor,Electronica,Centro,2024-12-21,1131.68,3,0.0,completado
+PED-1188,CLI-072,Rocio Cabrera,Jeans,Ropa,Centro,2024-12-24,210.41,4,0.05,completado
+PED-1189,CLI-087,Tania Lozano,Audifonos,Electronica,Occidente,2024-11-25,387.18,5,,pendiente
+PED-1190,CLI-077,Nestor Aguilar,Lampara,Hogar,Sur,2024-08-29,248.34,3,0.2,completado
+PED-1191,CLI-045,Pablo Duarte,Audifonos,Electronica,Sur,2024-06-27,,5,0.05,pendiente
+PED-1192,CLI-026,Luis Fernandez,Monitor,Electronica,Sur,2024-08-16,1156.25,3,0.0,completado
+PED-1193,CLI-097,Diana Rojas,Licuadora,Hogar,Norte,2024-05-24,-5.0,5,0.0,cancelado
+PED-1194,CLI-064,Zacarias Luna,Laptop,Electronica,Centro,2024-03-04,830.56,2,0.15,completado
+PED-1195,CLI-046,Carlos Bello,Laptop,Electronica,Centro,2024-10-29,1372.22,3,0.15,completado
+PED-1196,CLI-009,Carlos Bello,Sueter,Ropa,Centro,2024-10-24,63.65,1,0.05,completado
+PED-1197,CLI-028,Olivia Ramos,Licuadora,Hogar,Centro,2024-09-19,288.81,5,0.0,completado
+PED-1198,CLI-091,Ana Torres,Laptop,Electronica,Centro,2024-06-09,2658.76,5,0.2,completado
+PED-1199,CLI-044,Olivia Ramos,Palo de golf,Deportes,Sur,2024-01-09,321.52,2,0.2,cancelado
+PED-1200,CLI-120,Pablo Duarte,Chamarra,Ropa,Centro,2024-10-15,698.0,4,0.15,pendiente
+PED-1201,CLI-060,Monica Salas,Juego de sabanas,Hogar,Centro,2024-10-05,29.41,1,0.1,completado
+PED-1202,CLI-101,Marisol Vega,Balon de futbol,Deportes,Occidente,2024-11-05,73.0,4,,pendiente
+PED-1203,CLI-090,Irene Padilla,Laptop,Electronica,Sur,2024-08-17,3999.84,5,0.2,completado
+PED-1204,CLI-042,Gabriela Nunez,Monitor,Electronica,Norte,2024-03-12,1040.42,3,0.1,completado
+PED-1205,CLI-081,Felipe Campos,Audifonos,Electronica,Norte,2024-03-23,436.73,5,0.15,completado
+PED-1206,CLI-032,Elena Quiroz,Monitor,Electronica,Norte,2024-10-24,878.84,5,0.2,completado
+PED-1207,CLI-119,Monica Salas,Jeans,Ropa,Norte,2024-10-10,217.12,2,0.15,completado
+PED-1208,CLI-093,Ulises Perea,Monitor,Electronica,Centro,2024-01-02,1358.63,4,0.05,completado
+PED-1209,CLI-088,Yolanda Prieto,Balon de futbol,Deportes,Norte,2024-02-21,,5,0.05,completado
+PED-1210,CLI-090,Quetzal Marin,Jeans,Ropa,Centro,2024-05-29,115.03,2,0.15,completado
+PED-1211,CLI-020,Monica Salas,Sueter,Ropa,Centro,2024-03-29,753.39,5,0.2,cancelado
+PED-1212,CLI-030,Monica Salas,Laptop,Electronica,Norte,2024-06-19,829.14,1,0.0,completado
+PED-1213,CLI-026,Cecilia Arce,Licuadora,Hogar,Occidente,2024-08-20,78.41,1,0.0,pendiente
+PED-1214,CLI-033,Pablo Duarte,Jeans,Ropa,Norte,2024-05-26,188.52,4,,cancelado
+PED-1215,CLI-095,Tania Lozano,Jeans,Ropa,Occidente,2024-02-28,283.66,5,0.0,completado
+PED-1216,CLI-111,Pablo Duarte,Monitor,Electronica,Occidente,2024-01-19,1036.78,2,0.1,completado
+PED-1217,CLI-015,Ximena Gil,Monitor,Electronica,Occidente,2024-02-08,841.76,2,0.15,completado
+PED-1218,CLI-053,Luis Herrera,Lampara,Hogar,Sur,2024-10-26,684.03,5,0.1,completado
+PED-1219,CLI-081,Pablo Duarte,Palo de golf,Deportes,Centro,2024-11-09,220.17,2,0.05,completado
+PED-1220,CLI-095,Irene Padilla,Palo de golf,Deportes,Centro,2024-09-04,1470.52,5,0.15,completado
+PED-1221,CLI-098,Cecilia Arce,Balon de futbol,Deportes,Occidente,2024-05-23,602.88,1,0.05,completado
+PED-1222,CLI-077,Rocio Cabrera,Jeans,Ropa,Occidente,2024-05-30,166.52,2,0.0,completado
+PED-1223,CLI-058,Bruno Cortes,Juego de sabanas,Hogar,Centro,2024-04-01,209.09,2,0.15,cancelado
+PED-1224,CLI-041,Damian Ortiz,Palo de golf,Deportes,Norte,2024-01-09,506.15,2,0.2,pendiente
+PED-1225,CLI-055,Karla Mendoza,Lampara,Hogar,Occidente,2024-09-30,233.99,4,0.0,completado
+PED-1226,CLI-048,Quetzal Marin,Monitor,Electronica,Occidente,2024-04-04,2169.0,5,0.0,completado
+PED-1227,CLI-050,Ximena Gil,Sueter,Ropa,Norte,2024-10-17,318.34,4,,completado
+PED-1228,CLI-004,Luis Fernandez,Sueter,Ropa,Centro,2024-09-28,293.7,3,0.0,completado
+PED-1229,CLI-003,Bruno Cortes,Monitor,Electronica,Occidente,2024-01-22,1040.59,3,0.05,completado
+PED-1230,CLI-070,Ulises Perea,Laptop,Electronica,Centro,2024-12-02,2784.01,5,0.15,pendiente
+PED-1231,CLI-046,Marisol Vega,Bicicleta,Deportes,Occidente,2024-02-02,620.19,1,0.0,completado
+PED-1232,CLI-016,Luis Herrera,Juego de sabanas,Hogar,Occidente,2024-08-18,115.09,1,0.0,pendiente
+PED-1233,CLI-085,Karla Mendoza,Sueter,Ropa,Centro,2024-01-25,261.91,4,0.0,completado
+PED-1234,CLI-096,Ximena Gil,Lampara,Hogar,Centro,2024-11-03,98.85,3,0.2,completado
+PED-1235,CLI-025,Jorge Estrada,Licuadora,Hogar,Norte,2024-06-14,829.23,4,0.15,pendiente
+PED-1236,CLI-110,Karla Mendoza,Bicicleta,Deportes,Sur,2024-07-21,600.77,4,0.05,completado
+PED-1237,CLI-075,Ulises Perea,Chamarra,Ropa,Sur,2024-08-10,562.4,4,,completado
+PED-1238,CLI-054,Jorge Estrada,Monitor,Electronica,Sur,2024-06-09,1118.05,4,0.15,completado
+PED-1239,CLI-116,Olivia Ramos,Monitor,Electronica,Centro,2024-01-31,936.93,2,0.1,pendiente
+PED-1240,CLI-112,Elena Quiroz,Licuadora,Hogar,Norte,2024-09-26,,4,0.05,completado
+PED-1241,CLI-067,Olivia Ramos,Chamarra,Ropa,Occidente,2024-07-06,,3,0.05,completado
+PED-1242,CLI-022,Tania Lozano,Audifonos,Electronica,Sur,2024-06-06,143.07,3,0.1,completado
+PED-1243,CLI-013,Damian Ortiz,Balon de futbol,Deportes,Norte,2024-05-26,67.17,4,0.1,completado
+PED-1244,CLI-040,Diana Rojas,Sueter,Ropa,Occidente,2024-03-25,68.07,1,0.2,pendiente
+PED-1245,CLI-097,Gabriela Nunez,Licuadora,Hogar,Centro,2024-05-07,379.17,3,0.0,cancelado
+PED-1246,CLI-032,Carlos Bello,Sueter,Ropa,Sur,2024-07-11,302.04,4,0.15,cancelado
+PED-1247,CLI-081,Yolanda Prieto,Bicicleta,Deportes,Centro,2024-12-08,3379.36,5,,completado
+PED-1248,CLI-119,Damian Ortiz,Palo de golf,Deportes,Centro,2024-04-08,754.46,2,0.1,pendiente
+PED-1249,CLI-050,Monica Salas,Bicicleta,Deportes,Sur,2024-10-21,1591.55,3,0.05,completado
+PED-1250,CLI-040,Elena Quiroz,Jeans,Ropa,Norte,2024-06-11,112.74,3,0.0,pendiente
+PED-1251,CLI-014,Felipe Campos,Licuadora,Hogar,Sur,2024-11-21,,4,0.0,completado
+PED-1252,CLI-008,Ana Torres,Bicicleta,Deportes,Norte,2024-11-05,988.92,4,0.1,completado
+PED-1253,CLI-055,Yolanda Prieto,Audifonos,Electronica,Occidente,2024-02-16,334.3,4,0.0,completado
+PED-1254,CLI-022,Bruno Cortes,Audifonos,Electronica,Sur,2024-03-15,447.63,3,0.0,completado
+PED-1255,CLI-068,Jorge Estrada,Jeans,Ropa,Centro,2024-10-08,381.44,4,0.05,completado
+PED-1256,CLI-027,Karla Mendoza,Licuadora,Hogar,Centro,2024-01-07,152.24,4,0.1,completado
+PED-1257,CLI-027,Valeria Nino,Monitor,Electronica,Norte,2024-11-11,1678.8,4,0.05,pendiente
+PED-1258,CLI-073,Rocio Cabrera,Monitor,Electronica,Centro,2024-06-15,909.33,4,0.0,completado
+PED-1259,CLI-074,Cecilia Arce,Sueter,Ropa,Norte,2024-04-20,93.27,1,0.2,completado

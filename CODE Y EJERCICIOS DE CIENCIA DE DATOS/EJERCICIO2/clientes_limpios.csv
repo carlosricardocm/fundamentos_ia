@@ -1,0 +1,52 @@
+id_cliente,nombre_cliente,email,email_valido,telefono,fecha_registro,ingreso_anual,pais,edad,activo
+C0038,Sofia Delgado,sofia.delgado@ejemplo.com,True,(555) 176-5430,2021-10-10,174238.65,United Kingdom,66,False
+C0026,Javier Nava,javier.nava@ejemplo.com,True,(555) 272-4688,2021-05-12,224378.35,Mexico,66,False
+C0010,Roberto Caceres,roberto.caceres@ejemplo.com.mx,True,(555) 833-3833,2022-05-07,23595.5,United Kingdom,36,True
+C0015,Paola Sierra,paola.sierra@ejemplo.com,True,(555) 566-6775,2023-02-19,39730.09,Mexico,64,True
+C0044,Natalia Rios,natalia.rios@ejemplo.com,True,(555) 703-3016,2022-06-13,56747.24,United States,26,True
+C0045,Fernando Castro,fernando.castro@ejemplo.com,True,(555) 206-7458,2024-06-17,32869.12,Mexico,,True
+C0032,Juan Perez,juan.perez@ejemplo.com,True,(555) 116-2252,2022-08-06,136527.05,United States,31,True
+C0005,Luisa Martinez,luisa.martinez@ejemplo.com,True,(555) 354-4182,2023-10-15,47026.9,Mexico,58,True
+C0040,Laura Mejia,laura.mejia@ejemplo.com.mx,True,(555) 221-8165,2023-07-05,84405.78,United Kingdom,30,True
+C0034,Ana Gomez,correo_sin_arroba.com,False,(555) 188-7306,2022-10-06,237050.04,United States,71,True
+C0047,Hugo Benitez,hugo.benitez@ejemplo.com,True,(555) 115-3475,2021-08-21,201541.24,Mexico,38,False
+C0013,Natalia Rios,natalia.rios@ejemplo.com.mx,True,(555) 713-1667,2024-02-21,224291.78,United States,,True
+C0004,Carlos Ruiz,carlos.ruiz@ejemplo.com.mx,True,(555) 070-5210,2024-09-12,26653.42,United States,41,True
+C0042,Elena Vargas,elena.vargas@ejemplo.com,True,(555) 882-6142,2022-12-31,90070.89,United States,,True
+C0024,Oscar Villa,oscar.villa@ejemplo.com,True,(555) 382-8212,2022-04-30,177409.84,United States,25,True
+C0020,Alberto Nunez,,False,(555) 680-7485,2024-06-11,134874.14,United Kingdom,27,True
+C0030,Ricardo Ponce,ricardo.ponce@ejemplo.com,True,(555) 763-7417,2022-04-26,137252.33,United Kingdom,68,True
+C0051,Alberto Nunez,alberto.nunez@ejemplo.com,True,(555) 070-4762,2022-12-07,112626.21,United States,48,True
+C0039,Miguel Angel Torres,miguel.torres@ejemplo.com,True,(555) 321-6047,2023-12-03,62354.47,United Kingdom,59,False
+C0036,Luisa Martinez,luisa.martinez@ejemplo.com,True,(555) 040-6775,2023-08-02,185514.61,Mexico,68,False
+C0021,Teresa Ochoa,teresa.ochoa@ejemplo.com,True,(555) 151-2725,2022-04-20,224370.97,United States,32,True
+C0001,Juan Perez,juan.perez@ejemplo.com.mx,True,(555) 324-8821,2023-11-27,24897.45,United States,34,True
+C0048,Claudia Moran,claudia.moran@ejemplo.com,True,(555) 216-3061,2024-07-26,144039.52,United Kingdom,63,False
+C0028,Ivan Guerrero,ivan.guerrero@ejemplo.com.mx,True,(555) 214-8724,2023-11-24,26602.8,United Kingdom,51,False
+C0043,Jose Antonio Lima,jose.lima@ejemplo.com.mx,True,(555) 374-5325,2023-08-08,238892.09,United States,66,True
+C0014,Fernando Castro,fernando.castro@ejemplo.com,True,(555) 408-8460,2021-05-20,25587.83,United States,33,True
+C0009,Laura Mejia,laura.mejia@ejemplo.com,True,(555) 062-3270,2022-06-13,60833.07,United Kingdom,33,False
+C0018,Raul Espinoza,raul.espinoza@ejemplo.com,True,(555) 626-4034,2022-01-22,51699.98,United Kingdom,38,False
+C0002,Maria Lopez,maria.lopez@ejemplo.com,True,(555) 335-1664,2021-09-29,76491.55,United States,45,True
+C0031,Marta Zuniga,marta.zuniga@ejemplo.com.mx,True,(555) 342-7043,2023-03-27,103674.53,United States,32,True
+C0037,Pedro Solis,pedro.solis@ejemplo.com.mx,True,(555) 557-4700,2021-05-29,66011.79,Mexico,48,False
+C0008,Miguel Angel Torres,bob@invalido,False,(555) 453-0085,2022-02-01,42031.38,United Kingdom,32,False
+C0011,Elena Vargas,elena.vargas@ejemplo.com,True,(555) 021-2658,2022-06-11,129936.7,United States,68,True
+C0049,Raul Espinoza,raul.espinoza@ejemplo.com.mx,True,(555) 350-2160,2023-02-15,81949.31,United Kingdom,57,False
+C0016,Hugo Benitez,hugo.benitez@ejemplo.com.mx,True,(555) 628-3705,2022-11-04,105187.17,Mexico,43,False
+C0007,Sofia Delgado,sofia.delgado@ejemplo.com.mx,True,(555) 643-4114,2024-05-23,57496.57,Mexico,47,False
+C0046,Paola Sierra,paola.sierra@ejemplo.com.mx,True,(555) 036-0223,2025-01-19,61982.14,Mexico,36,False
+C0027,Monica Escobar,monica.escobar@ejemplo.com,True,(555) 158-3223,2023-10-22,110387.89,Mexico,42,False
+C0006,Pedro Solis,pedro.solis@ejemplo.com,True,(555) 278-8251,2023-12-02,238403.37,Mexico,,False
+C0050,Veronica Pineda,veronica.pineda@ejemplo.com,True,(555) 060-0876,2024-06-07,23273.94,United Kingdom,22,True
+C0035,Carlos Ruiz,carlos.ruiz@ejemplo.com,True,(555) 674-0035,2021-02-15,184837.34,Mexico,25,True
+C0023,Liliana Parra,liliana.parra@ejemplo.com,True,(555) 500-4422,2021-04-15,44346.38,United States,54,True
+C0041,Roberto Caceres,roberto.caceres@ejemplo.com,True,(555) 260-0650,2024-09-10,179947.91,United States,19,True
+C0025,Adriana Romero,adriana.romero@ejemplo.com.mx,True,(555) 543-4160,2023-12-19,119088.17,Mexico,71,True
+C0029,Sandra Leal,sandra.leal@ejemplo.com,True,(555) 015-0355,2022-10-31,228867.01,United Kingdom,,False
+C0019,Veronica Pineda,veronica.pineda@ejemplo.com.mx,True,(555) 463-5543,2022-12-26,74992.23,United Kingdom,62,False
+C0012,Jose Antonio Lima,jose.lima@ejemplo.com,True,(555) 748-2060,2024-02-22,216802.02,United States,57,True
+C0022,Daniel Fuentes,daniel.fuentes@ejemplo.com.mx,True,(555) 813-5362,2021-03-30,199130.07,United States,36,True
+C0033,Maria Lopez,maria.lopez@ejemplo.com,True,(555) 386-0325,2022-02-03,133879.59,United States,70,True
+C0003,Ana Gomez,ana.gomez@ejemplo.com,True,(555) 643-3326,2022-11-22,98208.36,United States,,True
+C0017,Claudia Moran,claudia.moran@ejemplo.com,True,(555) 273-0712,2024-07-15,112565.55,Mexico,66,False
