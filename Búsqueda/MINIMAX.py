@@ -143,7 +143,7 @@ class TicTacToe:
         state = self.S_o()
         
         print("¡Bienvenido al Tic-Tac-Toe!")
-        print(f"Tú eres '{human_player}' y la IA es '{'X' if human_player == 'O' else 'O'}'")
+        #print(f"Tú eres '{human_player}' y la IA es '{'X' if human_player == 'O' else 'O'}'")
         
         while not self.TERMINAL(state):
             self.print_board(state)
@@ -186,4 +186,4 @@ class TicTacToe:
 # Para jugar:
 if __name__ == "__main__":
     game = TicTacToe()
-    game.play_game(human_player='0')  # Puedes cambiar a 'X' si quieres empezar
+    game.play_game(human_player='X')  # Puedes cambiar a '0' si quieres que empiece la IA
